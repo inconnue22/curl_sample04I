@@ -221,7 +221,7 @@ am__objects_2 = ../lib/libcurltool_la-strtoofft.lo \
 am__objects_3 =
 am__objects_4 = $(am__objects_1) $(am__objects_2) $(am__objects_3)
 am__objects_5 = $(am__objects_4)
-am_libcurltool_la_OBJECTS = $(am__objects_5)
+#am_libcurltool_la_OBJECTS = $(am__objects_5)
 libcurltool_la_OBJECTS = $(am_libcurltool_la_OBJECTS)
 AM_V_lt = $(am__v_lt_$(V))
 am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
@@ -231,7 +231,7 @@ libcurltool_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CCLD) \
 	$(libcurltool_la_CFLAGS) $(CFLAGS) $(libcurltool_la_LDFLAGS) \
 	$(LDFLAGS) -o $@
-am_libcurltool_la_rpath =
+#am_libcurltool_la_rpath =
 am__objects_6 = slist_wc.$(OBJEXT) tool_binmode.$(OBJEXT) \
 	tool_bname.$(OBJEXT) tool_cb_dbg.$(OBJEXT) \
 	tool_cb_hdr.$(OBJEXT) tool_cb_prg.$(OBJEXT) \
@@ -440,7 +440,7 @@ am__relativize = \
   reldir="$$dir2"
 ACLOCAL = ${SHELL} /github/curl/missing aclocal-1.16
 AMTAR = $${TAR-tar}
-AM_DEFAULT_VERBOSITY = 1
+AM_DEFAULT_VERBOSITY = 0
 AR = /usr/bin/ar
 AR_FLAGS = cr
 AS = as
@@ -453,34 +453,34 @@ CC = gcc
 CCDEPMODE = depmode=gcc3
 
 # This might hold -Werror
-CFLAGS = -Werror-implicit-function-declaration -g -O2 -pedantic -Wall -W -Wpointer-arith -Wwrite-strings -Wunused -Wshadow -Winline -Wnested-externs -Wmissing-declarations -Wmissing-prototypes -Wno-long-long -Wbad-function-cast -Wfloat-equal -Wno-multichar -Wsign-compare -Wundef -Wno-format-nonliteral -Wendif-labels -Wstrict-prototypes -Wdeclaration-after-statement -Wold-style-definition -Wstrict-aliasing=3 -Wcast-align -Wtype-limits -Wold-style-declaration -Wmissing-parameter-type -Wempty-body -Wclobbered -Wignored-qualifiers -Wconversion -Wno-sign-conversion -Wvla -ftree-vrp -Wdouble-promotion -Wformat=2 -Warray-bounds=2 -Wshift-negative-value -Wshift-overflow=2 -Wnull-dereference -fdelete-null-pointer-checks -Wduplicated-cond -Wunused-const-variable -Wduplicated-branches -Wrestrict -Walloc-zero -Wformat-overflow=2 -Wformat-truncation=2 -Wimplicit-fallthrough=4 -Wno-system-headers -Wenum-conversion -pthread 
-CFLAG_CURL_SYMBOL_HIDING = -fvisibility=hidden
-CONFIGURE_OPTIONS = " '--with-openssl' '--disable-shared' '--disable-largefile' '--disable-libtool-lock' '--disable-silent-rules' '--enable-debug' '--enable-optimize' '--enable-curldebug' '--disable-symbol-hiding' '--enable-maintainer-mode' '--disable-ares' '--enable-http' '--enable-ftp' '--disable-file' '--enable-ldap' '--disable-rtsp' '--enable-proxy' '--enable-telnet' '--disable-tftp' '--disable-imap' '--disable-smb' '--enable-smtp' '--disable-gopher' '--enable-mqtt' '--disable-manual' '--enable-openssl-auto-load-config' '--disable-versioned-symbols' '--enable-verbose' '--enable-crypto-auth' '--disable-ntlm-wb' '--enable-tls-srp' '--disable-http-auth' '--enable-doh' '--enable-mime' '--enable-netrc' '--enable-progress-meter' '--disable-dnsshuffle' '--enable-hsts' '--enable-hidden-symbols' '--enable-static' '--enable-fast-install'"
+CFLAGS = -g -fprofile-arcs -ftest-coverage -Werror-implicit-function-declaration -O0 -pedantic -Wall -W -Wpointer-arith -Wwrite-strings -Wunused -Wshadow -Winline -Wnested-externs -Wmissing-declarations -Wmissing-prototypes -Wno-long-long -Wbad-function-cast -Wfloat-equal -Wno-multichar -Wsign-compare -Wundef -Wno-format-nonliteral -Wendif-labels -Wstrict-prototypes -Wdeclaration-after-statement -Wold-style-definition -Wstrict-aliasing=3 -Wcast-align -Wtype-limits -Wold-style-declaration -Wmissing-parameter-type -Wempty-body -Wclobbered -Wignored-qualifiers -Wconversion -Wno-sign-conversion -Wvla -ftree-vrp -Wdouble-promotion -Wformat=2 -Warray-bounds=2 -Wshift-negative-value -Wshift-overflow=2 -Wnull-dereference -fdelete-null-pointer-checks -Wduplicated-cond -Wunused-const-variable -Wduplicated-branches -Wrestrict -Walloc-zero -Wformat-overflow=2 -Wformat-truncation=2 -Wimplicit-fallthrough=4 -Wno-system-headers -Wenum-conversion 
+CFLAG_CURL_SYMBOL_HIDING = 
+CONFIGURE_OPTIONS = " '--with-openssl' '--disable-shared' '--disable-largefile' '--disable-libtool-lock' '--enable-silent-rules' '--disable-optimize' '--enable-warnings' '--enable-curldebug' '--disable-symbol-hiding' '--disable-hidden-symbols' '--enable-ares' '--enable-dependency-tracking' '--enable-http' '--enable-ftp' '--enable-ldap' '--enable-proxy' '--disable-dict' '--enable-telnet' '--enable-smtp' '--enable-gopher' '--enable-mqtt' '--enable-manual' '--enable-libcurl-option' '--disable-ipv6' '--disable-versioned-symbols' '--enable-verbose' '--enable-sspi' '--disable-crypto-auth' '--disable-tls-srp' '--disable-cookies' '--disable-http-auth' '--disable-doh' '--disable-mime' '--enable-dateparse' '--disable-dnsshuffle' '--enable-get-easy-options' '--enable-alt-svc' '--enable-hsts' '--enable-code-coverage' '--enable-static' '--enable-fast-install' '--enable-libgcc'"
 CPP = gcc -E
-CPPFLAGS = 
+CPPFLAGS = -DNDEBUG
 CPPFLAG_CURL_STATICLIB = -DCURL_STATICLIB
 CURLVERSION = 7.78.0-DEV
 CURL_CA_BUNDLE = "/etc/pki/tls/certs/ca-bundle.crt"
 CURL_CFLAG_EXTRAS = 
-CURL_DISABLE_DICT = 
-CURL_DISABLE_FILE = 1
+CURL_DISABLE_DICT = 1
+CURL_DISABLE_FILE = 
 CURL_DISABLE_FTP = 
-CURL_DISABLE_GOPHER = 1
+CURL_DISABLE_GOPHER = 
 CURL_DISABLE_HTTP = 
-CURL_DISABLE_IMAP = 1
+CURL_DISABLE_IMAP = 
 CURL_DISABLE_LDAP = 
 CURL_DISABLE_LDAPS = 
 CURL_DISABLE_MQTT = 
 CURL_DISABLE_POP3 = 
 CURL_DISABLE_PROXY = 
-CURL_DISABLE_RTSP = 1
-CURL_DISABLE_SMB = 1
+CURL_DISABLE_RTSP = 
+CURL_DISABLE_SMB = 
 CURL_DISABLE_SMTP = 
 CURL_DISABLE_TELNET = 
-CURL_DISABLE_TFTP = 1
+CURL_DISABLE_TFTP = 
 CURL_LT_SHLIB_VERSIONED_FLAVOUR = 
-CURL_NETWORK_AND_TIME_LIBS = 
-CURL_NETWORK_LIBS = 
+CURL_NETWORK_AND_TIME_LIBS = -lgcc -lgcov
+CURL_NETWORK_LIBS = -lgcc -lgcov
 CURL_WITH_MULTI_SSL = 
 CYGPATH_W = echo
 DEFAULT_SSL_BACKEND = no
@@ -498,7 +498,7 @@ ENABLE_STATIC = yes
 EXEEXT = 
 FGREP = /usr/bin/grep -F
 FISH_FUNCTIONS_DIR = /usr/share/fish/vendor_completions.d
-GCOV = 
+GCOV = gcov
 GREP = /usr/bin/grep
 HAVE_BROTLI = 
 HAVE_GNUTLS_SRP = 
@@ -513,12 +513,12 @@ INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
-IPV6_ENABLED = 1
-LCOV = 
+IPV6_ENABLED = 
+LCOV = lcov
 LD = /usr/bin/ld -m elf_x86_64
-LDFLAGS = 
-LIBCURL_LIBS = -lssl -lcrypto -lssl -lcrypto -lldap -llber -lzstd -lz -pthread
-LIBCURL_NO_SHARED = -lssl -lcrypto -lssl -lcrypto  -lldap -llber -lzstd  -lz  -pthread
+LDFLAGS = -L/usr/usr/lib64
+LIBCURL_LIBS = -lcares -lssl -lcrypto -lssl -lcrypto -lldap -llber -lzstd -lz -lgcc -lgcov
+LIBCURL_NO_SHARED = -lcares  -lssl -lcrypto -lssl -lcrypto  -lldap -llber -lzstd  -lz -lgcc  -lgcov
 LIBOBJS = 
 
 # Prevent LIBS from being used for all link targets
@@ -528,7 +528,7 @@ LIPO =
 LN_S = ln -s
 LTLIBOBJS = 
 LT_SYS_LIBRARY_PATH = 
-MAINT = 
+MAINT = #
 MAKEINFO = ${SHELL} /github/curl/missing makeinfo
 MANIFEST_TOOL = :
 MANOPT = -man
@@ -566,9 +566,9 @@ SSL_BACKENDS = OpenSSL
 SSL_ENABLED = 1
 SSL_LIBS = -lssl -lcrypto 
 STRIP = strip
-SUPPORT_FEATURES = AsynchDNS HSTS HTTPS-proxy IPv6 Largefile NTLM SSL TLS-SRP UnixSockets alt-svc libz zstd
-SUPPORT_PROTOCOLS = DICT FTP FTPS HTTP HTTPS LDAP LDAPS MQTT POP3 POP3S SMTP SMTPS TELNET
-USE_ARES = 
+SUPPORT_FEATURES = AsynchDNS HSTS HTTPS-proxy Largefile SSL UnixSockets alt-svc libz zstd
+SUPPORT_PROTOCOLS = FILE FTP FTPS GOPHER GOPHERS HTTP HTTPS IMAP IMAPS LDAP LDAPS MQTT POP3 POP3S RTSP SMTP SMTPS TELNET TFTP
+USE_ARES = 1
 USE_BEARSSL = 
 USE_GNUTLS = 
 USE_HYPER = 
@@ -807,17 +807,17 @@ CURL_FILES = $(CURL_CFILES) $(CURLX_CFILES) $(CURL_HFILES)
 
 # CURL_FILES comes from Makefile.inc
 curl_SOURCES = $(CURL_FILES)
-#curl_LDADD = $(top_builddir)/lib/libcurl.la  -lssl -lcrypto  -lz 
-curl_LDADD = $(top_builddir)/lib/libcurl.la -lssl -lcrypto -lssl -lcrypto -lldap -llber -lzstd -lz -pthread
+#curl_LDADD = $(top_builddir)/lib/libcurl.la  -lssl -lcrypto  -lz -lgcc -lgcov
+curl_LDADD = $(top_builddir)/lib/libcurl.la -lcares -lssl -lcrypto -lssl -lcrypto -lldap -llber -lzstd -lz -lgcc -lgcov
 
 # if unit tests are enabled, build a static library to link them with
-noinst_LTLIBRARIES = libcurltool.la
-libcurltool_la_CPPFLAGS = $(AM_CPPFLAGS) \
-                          -DCURL_STATICLIB -DUNITTESTS
+#noinst_LTLIBRARIES = libcurltool.la
+#libcurltool_la_CPPFLAGS = $(AM_CPPFLAGS) \
+#                          -DCURL_STATICLIB -DUNITTESTS
 
-libcurltool_la_CFLAGS = 
-libcurltool_la_LDFLAGS = -static $(LINKFLAGS)
-libcurltool_la_SOURCES = $(curl_SOURCES)
+#libcurltool_la_CFLAGS = 
+#libcurltool_la_LDFLAGS = -static $(LINKFLAGS)
+#libcurltool_la_SOURCES = $(curl_SOURCES)
 CLEANFILES = tool_hugehelp.c
 EXTRA_DIST = mkhelp.pl makefile.dj                                     \
  Makefile.m32 macos/curl.mcp.xml.sit.hqx macos/MACINSTALL.TXT          \
@@ -845,7 +845,7 @@ all: all-recursive
 
 .SUFFIXES:
 .SUFFIXES: .c .lo .o .obj
-$(srcdir)/Makefile.in:  $(srcdir)/Makefile.am $(srcdir)/Makefile.inc $(am__configure_deps)
+$(srcdir)/Makefile.in: # $(srcdir)/Makefile.am $(srcdir)/Makefile.inc $(am__configure_deps)
 	@for dep in $?; do \
 	  case '$(am__configure_deps)' in \
 	    *$$dep*) \
@@ -870,9 +870,9 @@ $(srcdir)/Makefile.inc $(am__empty):
 $(top_builddir)/config.status: $(top_srcdir)/configure $(CONFIG_STATUS_DEPENDENCIES)
 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
 
-$(top_srcdir)/configure:  $(am__configure_deps)
+$(top_srcdir)/configure: # $(am__configure_deps)
 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
-$(ACLOCAL_M4):  $(am__aclocal_m4_deps)
+$(ACLOCAL_M4): # $(am__aclocal_m4_deps)
 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
 $(am__aclocal_m4_deps):
 install-binPROGRAMS: $(bin_PROGRAMS)
@@ -20916,28 +20916,28 @@ uninstall-am: uninstall-binPROGRAMS
 
 # Here are the stuff to create a built-in manual
 
-#$(MANPAGE):
-#	cd $(top_builddir)/docs && $(MAKE)
+$(MANPAGE):
+	cd $(top_builddir)/docs && $(MAKE)
 
 # This generates the tool_hugehelp.c file in both uncompressed and
 # compressed formats.
-#$(HUGE): $(MANPAGE) $(MKHELP)
-#	$(HUGECMD) (echo '#include "tool_setup.h"' > $(HUGE);   \
-#	echo '#ifndef HAVE_LIBZ' >> $(HUGE);                    \
-#	$(NROFF) $(MANPAGE) | $(PERL) $(MKHELP) >> $(HUGE);     \
-#	echo '#else' >> $(HUGE);                                \
-#	$(NROFF) $(MANPAGE) | $(PERL) $(MKHELP) -c >> $(HUGE);  \
-#	echo '#endif /* HAVE_LIBZ */' >> $(HUGE) )
+$(HUGE): $(MANPAGE) $(MKHELP)
+	$(HUGECMD) (echo '#include "tool_setup.h"' > $(HUGE);   \
+	echo '#ifndef HAVE_LIBZ' >> $(HUGE);                    \
+	$(NROFF) $(MANPAGE) | $(PERL) $(MKHELP) >> $(HUGE);     \
+	echo '#else' >> $(HUGE);                                \
+	$(NROFF) $(MANPAGE) | $(PERL) $(MKHELP) -c >> $(HUGE);  \
+	echo '#endif /* HAVE_LIBZ */' >> $(HUGE) )
 # This generates the tool_hugehelp.c file uncompressed only
-##$(HUGE): $(MANPAGE) $(MKHELP)
-##	$(HUGECMD)(echo '#include "tool_setup.h"' > $(HUGE);    \
-##	$(NROFF) $(MANPAGE) | $(PERL) $(MKHELP) >> $(HUGE) )
+#$(HUGE): $(MANPAGE) $(MKHELP)
+#	$(HUGECMD)(echo '#include "tool_setup.h"' > $(HUGE);    \
+#	$(NROFF) $(MANPAGE) | $(PERL) $(MKHELP) >> $(HUGE) )
 
 # built-in manual has been disabled, make a blank file
-$(HUGE):
-	$(HUGECMD)(echo "/* built-in manual is disabled, blank function */" > $(HUGE); \
-	echo '#include "tool_hugehelp.h"' >> $(HUGE); \
-	echo "void hugehelp(void) {}" >>$(HUGE) )
+#$(HUGE):
+#	$(HUGECMD)(echo "/* built-in manual is disabled, blank function */" > $(HUGE); \
+#	echo '#include "tool_hugehelp.h"' >> $(HUGE); \
+#	echo "void hugehelp(void) {}" >>$(HUGE) )
 
 # ignore tool_hugehelp.c since it is generated source code and it plays
 # by slightly different rules!
