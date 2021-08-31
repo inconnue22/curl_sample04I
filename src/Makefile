@@ -455,28 +455,28 @@ CCDEPMODE = depmode=none
 # This might hold -Werror
 CFLAGS = -Werror-implicit-function-declaration -O2 -Wno-system-headers -Wenum-conversion 
 CFLAG_CURL_SYMBOL_HIDING = -fvisibility=hidden
-CONFIGURE_OPTIONS = " '--with-openssl' '--disable-shared' '--disable-libtool-lock' '--disable-silent-rules' '--disable-debug' '--enable-optimize' '--disable-symbol-hiding' '--enable-ares' '--disable-dependency-tracking' '--enable-http' '--enable-ftp' '--disable-file' '--disable-ldap' '--enable-ldaps' '--disable-rtsp' '--disable-proxy' '--enable-dict' '--disable-telnet' '--disable-tftp' '--enable-imap' '--enable-smb' '--disable-smtp' '--disable-gopher' '--disable-mqtt' '--disable-manual' '--enable-libcurl-option' '--disable-ipv6' '--enable-versioned-symbols' '--disable-threaded-resolver' '--enable-verbose' '--enable-sspi' '--disable-crypto-auth' '--disable-tls-srp' '--enable-unix-sockets' '--enable-cookies' '--enable-socketpair' '--disable-http-auth' '--enable-doh' '--disable-mime' '--disable-dateparse' '--disable-netrc' '--disable-dnsshuffle' '--enable-get-easy-options' '--enable-alt-svc' '--enable-hidden-symbols' '--enable-static' '--enable-fast-install' '--enable-libgcc'"
+CONFIGURE_OPTIONS = " '--with-openssl' '--disable-shared' '--disable-largefile' '--disable-silent-rules' '--disable-warnings' '--enable-curldebug' '--enable-maintainer-mode' '--enable-ares' '--disable-dependency-tracking' '--disable-http' '--enable-ldap' '--disable-dict' '--enable-telnet' '--disable-tftp' '--disable-pop3' '--disable-imap' '--disable-smb' '--disable-smtp' '--disable-gopher' '--disable-manual' '--enable-libcurl-option' '--enable-ipv6' '--enable-openssl-auto-load-config' '--enable-versioned-symbols' '--disable-sspi' '--disable-crypto-auth' '--enable-ntlm-wb' '--disable-unix-sockets' '--disable-cookies' '--enable-socketpair' '--disable-http-auth' '--disable-doh' '--enable-mime' '--enable-netrc' '--enable-progress-meter' '--enable-dnsshuffle' '--enable-get-easy-options' '--enable-alt-svc' '--disable-hsts' '--enable-hidden-symbols' '--enable-static' '--enable-libgcc'"
 CPP = gcc -E
 CPPFLAGS = 
 CPPFLAG_CURL_STATICLIB = -DCURL_STATICLIB
 CURLVERSION = 7.78.0-DEV
 CURL_CA_BUNDLE = "/etc/pki/tls/certs/ca-bundle.crt"
 CURL_CFLAG_EXTRAS = 
-CURL_DISABLE_DICT = 
-CURL_DISABLE_FILE = 1
+CURL_DISABLE_DICT = 1
+CURL_DISABLE_FILE = 
 CURL_DISABLE_FTP = 
 CURL_DISABLE_GOPHER = 1
-CURL_DISABLE_HTTP = 
-CURL_DISABLE_IMAP = 
-CURL_DISABLE_LDAP = 1
-CURL_DISABLE_LDAPS = 1
-CURL_DISABLE_MQTT = 1
-CURL_DISABLE_POP3 = 
-CURL_DISABLE_PROXY = 1
+CURL_DISABLE_HTTP = 1
+CURL_DISABLE_IMAP = 1
+CURL_DISABLE_LDAP = 
+CURL_DISABLE_LDAPS = 
+CURL_DISABLE_MQTT = 
+CURL_DISABLE_POP3 = 1
+CURL_DISABLE_PROXY = 
 CURL_DISABLE_RTSP = 1
-CURL_DISABLE_SMB = 
+CURL_DISABLE_SMB = 1
 CURL_DISABLE_SMTP = 1
-CURL_DISABLE_TELNET = 1
+CURL_DISABLE_TELNET = 
 CURL_DISABLE_TFTP = 1
 CURL_LT_SHLIB_VERSIONED_FLAVOUR = OPENSSL_
 CURL_NETWORK_AND_TIME_LIBS = -lgcc
@@ -502,7 +502,7 @@ GCOV =
 GREP = /usr/bin/grep
 HAVE_BROTLI = 
 HAVE_GNUTLS_SRP = 
-HAVE_LDAP_SSL = 
+HAVE_LDAP_SSL = 1
 HAVE_LIBZ = 1
 HAVE_OPENSSL_SRP = 1
 HAVE_PROTO_BSDSOCKET_H = 
@@ -513,12 +513,12 @@ INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
-IPV6_ENABLED = 
+IPV6_ENABLED = 1
 LCOV = 
 LD = /usr/bin/ld -m elf_x86_64
 LDFLAGS = -L/usr/usr/lib64
-LIBCURL_LIBS = -lcares -lssl -lcrypto -lssl -lcrypto -lzstd -lz -lgcc
-LIBCURL_NO_SHARED = -lcares  -lssl -lcrypto -lssl -lcrypto  -lzstd  -lz -lgcc 
+LIBCURL_LIBS = -lcares -lssl -lcrypto -lssl -lcrypto -lldap -llber -lzstd -lz -lgcc
+LIBCURL_NO_SHARED = -lcares  -lssl -lcrypto -lssl -lcrypto  -lldap -llber -lzstd  -lz -lgcc 
 LIBOBJS = 
 
 # Prevent LIBS from being used for all link targets
@@ -528,7 +528,7 @@ LIPO =
 LN_S = ln -s
 LTLIBOBJS = 
 LT_SYS_LIBRARY_PATH = 
-MAINT = #
+MAINT = 
 MAKEINFO = ${SHELL} /github/curl/missing makeinfo
 MANIFEST_TOOL = :
 MANOPT = -man
@@ -566,8 +566,8 @@ SSL_BACKENDS = OpenSSL
 SSL_ENABLED = 1
 SSL_LIBS = -lssl -lcrypto 
 STRIP = strip
-SUPPORT_FEATURES = AsynchDNS HSTS Largefile SSL UnixSockets alt-svc libz zstd
-SUPPORT_PROTOCOLS = DICT FTP FTPS HTTP HTTPS IMAP IMAPS POP3 POP3S
+SUPPORT_FEATURES = AsynchDNS HTTPS-proxy IPv6 Largefile SSL TLS-SRP libz zstd
+SUPPORT_PROTOCOLS = FILE FTP FTPS LDAP LDAPS MQTT TELNET
 USE_ARES = 1
 USE_BEARSSL = 
 USE_GNUTLS = 
@@ -583,12 +583,12 @@ USE_NGTCP2 =
 USE_NGTCP2_CRYPTO_GNUTLS = 
 USE_NGTCP2_CRYPTO_OPENSSL = 
 USE_NSS = 
-USE_OPENLDAP = 
+USE_OPENLDAP = 1
 USE_QUICHE = 
 USE_RUSTLS = 
 USE_SCHANNEL = 
 USE_SECTRANSP = 
-USE_UNIX_SOCKETS = 1
+USE_UNIX_SOCKETS = 
 USE_WIN32_CRYPTO = 
 USE_WIN32_LARGE_FILES = 
 USE_WIN32_SMALL_FILES = 
@@ -808,7 +808,7 @@ CURL_FILES = $(CURL_CFILES) $(CURLX_CFILES) $(CURL_HFILES)
 # CURL_FILES comes from Makefile.inc
 curl_SOURCES = $(CURL_FILES)
 #curl_LDADD = $(top_builddir)/lib/libcurl.la  -lssl -lcrypto  -lz -lgcc
-curl_LDADD = $(top_builddir)/lib/libcurl.la -lcares -lssl -lcrypto -lssl -lcrypto -lzstd -lz -lgcc
+curl_LDADD = $(top_builddir)/lib/libcurl.la -lcares -lssl -lcrypto -lssl -lcrypto -lldap -llber -lzstd -lz -lgcc
 
 # if unit tests are enabled, build a static library to link them with
 #noinst_LTLIBRARIES = libcurltool.la
@@ -845,7 +845,7 @@ all: all-recursive
 
 .SUFFIXES:
 .SUFFIXES: .c .lo .o .obj
-$(srcdir)/Makefile.in: # $(srcdir)/Makefile.am $(srcdir)/Makefile.inc $(am__configure_deps)
+$(srcdir)/Makefile.in:  $(srcdir)/Makefile.am $(srcdir)/Makefile.inc $(am__configure_deps)
 	@for dep in $?; do \
 	  case '$(am__configure_deps)' in \
 	    *$$dep*) \
@@ -870,9 +870,9 @@ $(srcdir)/Makefile.inc $(am__empty):
 $(top_builddir)/config.status: $(top_srcdir)/configure $(CONFIG_STATUS_DEPENDENCIES)
 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
 
-$(top_srcdir)/configure: # $(am__configure_deps)
+$(top_srcdir)/configure:  $(am__configure_deps)
 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
-$(ACLOCAL_M4): # $(am__aclocal_m4_deps)
+$(ACLOCAL_M4):  $(am__aclocal_m4_deps)
 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
 $(am__aclocal_m4_deps):
 install-binPROGRAMS: $(bin_PROGRAMS)
@@ -1605,7 +1605,7 @@ distdir-am: $(DISTFILES)
 	done
 check-am: all-am
 check: check-recursive
-all-local:
+#all-local:
 all-am: Makefile $(PROGRAMS) $(LTLIBRARIES) all-local
 installdirs: installdirs-recursive
 installdirs-am:
@@ -1958,7 +1958,7 @@ checksrc:
 	-W$(srcdir)/tool_hugehelp.c $(srcdir)/*.[ch])
 
 # for debug builds, we scan the sources on all regular make invokes
-#all-local: checksrc
+all-local: checksrc
 
 tidy:
 	$(TIDY) $(CURL_CFILES) $(TIDYFLAGS) -- $(curl_CPPFLAGS) $(CPPFLAGS) -DHAVE_CONFIG_H
