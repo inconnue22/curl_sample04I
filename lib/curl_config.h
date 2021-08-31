@@ -29,25 +29,25 @@
 /* #undef CURL_DISABLE_DICT */
 
 /* disable DoH */
-#define CURL_DISABLE_DOH 1
+/* #undef CURL_DISABLE_DOH */
 
 /* to disable FILE */
 /* #undef CURL_DISABLE_FILE */
 
 /* to disable FTP */
-/* #undef CURL_DISABLE_FTP */
+#define CURL_DISABLE_FTP 1
 
 /* to disable curl_easy_options */
-/* #undef CURL_DISABLE_GETOPTIONS */
+#define CURL_DISABLE_GETOPTIONS 1
 
 /* to disable Gopher */
 /* #undef CURL_DISABLE_GOPHER */
 
 /* disable alt-svc */
-/* #undef CURL_DISABLE_HSTS */
+#define CURL_DISABLE_HSTS 1
 
 /* to disable HTTP */
-/* #undef CURL_DISABLE_HTTP */
+#define CURL_DISABLE_HTTP 1
 
 /* disable HTTP authentication */
 /* #undef CURL_DISABLE_HTTP_AUTH */
@@ -62,13 +62,13 @@
 /* #undef CURL_DISABLE_LDAPS */
 
 /* to disable --libcurl C code generation option */
-#define CURL_DISABLE_LIBCURL_OPTION 1
+/* #undef CURL_DISABLE_LIBCURL_OPTION */
 
 /* disable mime API */
 #define CURL_DISABLE_MIME 1
 
 /* to disable MQTT */
-/* #undef CURL_DISABLE_MQTT */
+#define CURL_DISABLE_MQTT 1
 
 /* disable netrc parsing */
 /* #undef CURL_DISABLE_NETRC */
@@ -89,16 +89,16 @@
 #define CURL_DISABLE_PROGRESS_METER 1
 
 /* to disable proxies */
-#define CURL_DISABLE_PROXY 1
+/* #undef CURL_DISABLE_PROXY */
 
 /* to disable RTSP */
-/* #undef CURL_DISABLE_RTSP */
+#define CURL_DISABLE_RTSP 1
 
 /* disable DNS shuffling */
-#define CURL_DISABLE_SHUFFLE_DNS 1
+/* #undef CURL_DISABLE_SHUFFLE_DNS */
 
 /* to disable SMB/CIFS */
-/* #undef CURL_DISABLE_SMB */
+#define CURL_DISABLE_SMB 1
 
 /* to disable SMTP */
 #define CURL_DISABLE_SMTP 1
@@ -110,7 +110,7 @@
 /* #undef CURL_DISABLE_TELNET */
 
 /* to disable TFTP */
-#define CURL_DISABLE_TFTP 1
+/* #undef CURL_DISABLE_TFTP */
 
 /* to disable verbose strings */
 /* #undef CURL_DISABLE_VERBOSE_STRINGS */
@@ -125,7 +125,7 @@
 /* #undef CURL_WITH_MULTI_SSL */
 
 /* enable debug build options */
-#define DEBUGBUILD 1
+/* #undef DEBUGBUILD */
 
 /* your Entropy Gathering Daemon socket pathname */
 /* #undef EGD_SOCKET */
@@ -1016,10 +1016,10 @@
 /* #undef USE_THREADS_WIN32 */
 
 /* Use TLS-SRP authentication */
-/* #undef USE_TLS_SRP */
+#define USE_TLS_SRP 1
 
 /* Use Unix domain sockets */
-/* #undef USE_UNIX_SOCKETS */
+#define USE_UNIX_SOCKETS 1
 
 /* Define to 1 if you are building a Windows target with crypto API support.
    */
