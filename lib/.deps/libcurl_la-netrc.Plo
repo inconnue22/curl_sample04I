@@ -58,7 +58,9 @@ libcurl_la-netrc.lo: netrc.c /usr/include/stdc-predef.h curl_setup.h \
  /usr/include/unistd.h /usr/include/bits/posix_opt.h \
  /usr/include/bits/environments.h /usr/include/bits/confname.h \
  /usr/include/bits/getopt_posix.h /usr/include/bits/getopt_core.h \
- /usr/include/bits/unistd_ext.h curl_ctype.h
+ /usr/include/bits/unistd_ext.h curl_ctype.h /usr/include/pwd.h netrc.h \
+ strtok.h strcase.h curl_printf.h ../include/curl/mprintf.h curl_memory.h \
+ memdebug.h
 /usr/include/stdc-predef.h:
 curl_setup.h:
 curl_config.h:
@@ -174,3 +176,11 @@ curl_setup_once.h:
 /usr/include/bits/getopt_core.h:
 /usr/include/bits/unistd_ext.h:
 curl_ctype.h:
+/usr/include/pwd.h:
+netrc.h:
+strtok.h:
+strcase.h:
+curl_printf.h:
+../include/curl/mprintf.h:
+curl_memory.h:
+memdebug.h:
