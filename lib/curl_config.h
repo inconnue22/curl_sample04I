@@ -17,10 +17,10 @@
 /* #undef CURL_DEFAULT_SSL_BACKEND */
 
 /* disable alt-svc */
-/* #undef CURL_DISABLE_ALTSVC */
+#define CURL_DISABLE_ALTSVC 1
 
 /* to disable cookies support */
-#define CURL_DISABLE_COOKIES 1
+/* #undef CURL_DISABLE_COOKIES */
 
 /* to disable cryptographic authentication */
 #define CURL_DISABLE_CRYPTO_AUTH 1
@@ -29,7 +29,7 @@
 /* #undef CURL_DISABLE_DICT */
 
 /* disable DoH */
-#define CURL_DISABLE_DOH 1
+/* #undef CURL_DISABLE_DOH */
 
 /* to disable FILE */
 #define CURL_DISABLE_FILE 1
@@ -44,13 +44,13 @@
 #define CURL_DISABLE_GOPHER 1
 
 /* disable alt-svc */
-/* #undef CURL_DISABLE_HSTS */
+#define CURL_DISABLE_HSTS 1
 
 /* to disable HTTP */
-/* #undef CURL_DISABLE_HTTP */
+#define CURL_DISABLE_HTTP 1
 
 /* disable HTTP authentication */
-/* #undef CURL_DISABLE_HTTP_AUTH */
+#define CURL_DISABLE_HTTP_AUTH 1
 
 /* to disable IMAP */
 /* #undef CURL_DISABLE_IMAP */
@@ -59,31 +59,31 @@
 /* #undef CURL_DISABLE_LDAP */
 
 /* to disable LDAPS */
-/* #undef CURL_DISABLE_LDAPS */
+#define CURL_DISABLE_LDAPS 1
 
 /* to disable --libcurl C code generation option */
 /* #undef CURL_DISABLE_LIBCURL_OPTION */
 
 /* disable mime API */
-#define CURL_DISABLE_MIME 1
+/* #undef CURL_DISABLE_MIME */
 
 /* to disable MQTT */
-/* #undef CURL_DISABLE_MQTT */
+#define CURL_DISABLE_MQTT 1
 
 /* disable netrc parsing */
-/* #undef CURL_DISABLE_NETRC */
+#define CURL_DISABLE_NETRC 1
 
 /* to disable NTLM support */
 /* #undef CURL_DISABLE_NTLM */
 
 /* if the OpenSSL configuration won't be loaded automatically */
-#define CURL_DISABLE_OPENSSL_AUTO_LOAD_CONFIG 1
+/* #undef CURL_DISABLE_OPENSSL_AUTO_LOAD_CONFIG */
 
 /* disable date parsing */
 #define CURL_DISABLE_PARSEDATE 1
 
 /* to disable POP3 */
-/* #undef CURL_DISABLE_POP3 */
+#define CURL_DISABLE_POP3 1
 
 /* disable progress-meter */
 #define CURL_DISABLE_PROGRESS_METER 1
@@ -92,7 +92,7 @@
 /* #undef CURL_DISABLE_PROXY */
 
 /* to disable RTSP */
-/* #undef CURL_DISABLE_RTSP */
+#define CURL_DISABLE_RTSP 1
 
 /* disable DNS shuffling */
 /* #undef CURL_DISABLE_SHUFFLE_DNS */
@@ -104,10 +104,10 @@
 /* #undef CURL_DISABLE_SMTP */
 
 /* to disable socketpair support */
-#define CURL_DISABLE_SOCKETPAIR 1
+/* #undef CURL_DISABLE_SOCKETPAIR */
 
 /* to disable TELNET */
-#define CURL_DISABLE_TELNET 1
+/* #undef CURL_DISABLE_TELNET */
 
 /* to disable TFTP */
 /* #undef CURL_DISABLE_TFTP */
@@ -370,7 +370,7 @@
 #define HAVE_LDAP_INIT_FD 1
 
 /* Use LDAPS implementation */
-#define HAVE_LDAP_SSL 1
+/* #undef HAVE_LDAP_SSL */
 
 /* Define to 1 if you have the ldap_ssl.h header file. */
 /* #undef HAVE_LDAP_SSL_H */
@@ -935,7 +935,7 @@
 /* #undef USE_AMISSL */
 
 /* Define to enable c-ares support */
-#define USE_ARES 1
+/* #undef USE_ARES */
 
 /* if BearSSL is enabled */
 /* #undef USE_BEARSSL */
