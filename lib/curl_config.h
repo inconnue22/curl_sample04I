@@ -2,7 +2,7 @@
 /* lib/curl_config.h.in.  Generated from configure.ac by autoheader.  */
 
 /* to enable curl debug memory tracking */
-/* #undef CURLDEBUG */
+#define CURLDEBUG 1
 
 /* Location of default ca bundle */
 #define CURL_CA_BUNDLE "/etc/pki/tls/certs/ca-bundle.crt"
@@ -29,10 +29,10 @@
 /* #undef CURL_DISABLE_DICT */
 
 /* disable DoH */
-#define CURL_DISABLE_DOH 1
+/* #undef CURL_DISABLE_DOH */
 
 /* to disable FILE */
-/* #undef CURL_DISABLE_FILE */
+#define CURL_DISABLE_FILE 1
 
 /* to disable FTP */
 /* #undef CURL_DISABLE_FTP */
@@ -41,7 +41,7 @@
 /* #undef CURL_DISABLE_GETOPTIONS */
 
 /* to disable Gopher */
-/* #undef CURL_DISABLE_GOPHER */
+#define CURL_DISABLE_GOPHER 1
 
 /* disable alt-svc */
 /* #undef CURL_DISABLE_HSTS */
@@ -71,7 +71,7 @@
 /* #undef CURL_DISABLE_MQTT */
 
 /* disable netrc parsing */
-#define CURL_DISABLE_NETRC 1
+/* #undef CURL_DISABLE_NETRC */
 
 /* to disable NTLM support */
 /* #undef CURL_DISABLE_NTLM */
@@ -80,7 +80,7 @@
 /* #undef CURL_DISABLE_OPENSSL_AUTO_LOAD_CONFIG */
 
 /* disable date parsing */
-#define CURL_DISABLE_PARSEDATE 1
+/* #undef CURL_DISABLE_PARSEDATE */
 
 /* to disable POP3 */
 /* #undef CURL_DISABLE_POP3 */
@@ -92,16 +92,16 @@
 /* #undef CURL_DISABLE_PROXY */
 
 /* to disable RTSP */
-/* #undef CURL_DISABLE_RTSP */
+#define CURL_DISABLE_RTSP 1
 
 /* disable DNS shuffling */
 #define CURL_DISABLE_SHUFFLE_DNS 1
 
 /* to disable SMB/CIFS */
-/* #undef CURL_DISABLE_SMB */
+#define CURL_DISABLE_SMB 1
 
 /* to disable SMTP */
-#define CURL_DISABLE_SMTP 1
+/* #undef CURL_DISABLE_SMTP */
 
 /* to disable socketpair support */
 /* #undef CURL_DISABLE_SOCKETPAIR */
@@ -110,10 +110,10 @@
 /* #undef CURL_DISABLE_TELNET */
 
 /* to disable TFTP */
-/* #undef CURL_DISABLE_TFTP */
+#define CURL_DISABLE_TFTP 1
 
 /* to disable verbose strings */
-#define CURL_DISABLE_VERBOSE_STRINGS 1
+/* #undef CURL_DISABLE_VERBOSE_STRINGS */
 
 /* Definition to make a library symbol externally visible. */
 #define CURL_EXTERN_SYMBOL __attribute__ ((__visibility__ ("default")))
@@ -125,7 +125,7 @@
 /* #undef CURL_WITH_MULTI_SSL */
 
 /* enable debug build options */
-/* #undef DEBUGBUILD */
+#define DEBUGBUILD 1
 
 /* your Entropy Gathering Daemon socket pathname */
 /* #undef EGD_SOCKET */
@@ -965,7 +965,7 @@
 /* #undef USE_LIBSSH2 */
 
 /* If you want to build curl with the built-in manual */
-#define USE_MANUAL 1
+/* #undef USE_MANUAL */
 
 /* if mbedTLS is enabled */
 /* #undef USE_MBEDTLS */
