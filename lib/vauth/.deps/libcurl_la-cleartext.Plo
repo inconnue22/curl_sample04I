@@ -73,9 +73,9 @@ vauth/libcurl_la-cleartext.lo: vauth/cleartext.c \
  ../lib/rtsp.h ../lib/smb.h ../lib/mqtt.h ../lib/wildcard.h \
  ../lib/multihandle.h ../lib/conncache.h ../lib/socketpair.h \
  ../lib/quic.h ../lib/c-hyper.h ../lib/vauth/vauth.h ../lib/bufref.h \
- ../lib/curl_md5.h ../lib/curl_hmac.h ../lib/warnless.h ../lib/strtok.h \
- ../lib/sendf.h ../lib/curl_printf.h ../include/curl/mprintf.h \
- ../lib/curl_memory.h ../lib/memdebug.h
+ ../lib/curl_md5.h ../lib/warnless.h ../lib/strtok.h ../lib/sendf.h \
+ ../lib/curl_printf.h ../include/curl/mprintf.h ../lib/curl_memory.h \
+ ../lib/memdebug.h
 /usr/include/stdc-predef.h:
 ../lib/curl_setup.h:
 ../lib/curl_config.h:
@@ -238,7 +238,6 @@ vauth/libcurl_la-cleartext.lo: vauth/cleartext.c \
 ../lib/vauth/vauth.h:
 ../lib/bufref.h:
 ../lib/curl_md5.h:
-../lib/curl_hmac.h:
 ../lib/warnless.h:
 ../lib/strtok.h:
 ../lib/sendf.h:
