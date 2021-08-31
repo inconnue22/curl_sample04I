@@ -1032,9 +1032,9 @@ CC = gcc
 CCDEPMODE = depmode=gcc3
 
 # This might hold -Werror
-CFLAGS = -O0 -g -fprofile-arcs -ftest-coverage -Werror-implicit-function-declaration -Wno-system-headers -Wenum-conversion 
+CFLAGS = -O0 -g -fprofile-arcs -ftest-coverage -Werror-implicit-function-declaration -g -Wno-system-headers -Wenum-conversion 
 CFLAG_CURL_SYMBOL_HIDING = -fvisibility=hidden
-CONFIGURE_OPTIONS = " '--with-openssl' '--disable-shared' '--disable-libtool-lock' '--disable-debug' '--disable-warnings' '--enable-ares' '--enable-dependency-tracking' '--enable-http' '--disable-ftp' '--disable-ldap' '--enable-ldaps' '--disable-rtsp' '--enable-proxy' '--disable-dict' '--enable-tftp' '--disable-imap' '--disable-smtp' '--disable-libcurl-option' '--enable-ipv6' '--disable-openssl-auto-load-config' '--enable-versioned-symbols' '--disable-threaded-resolver' '--enable-verbose' '--enable-sspi' '--enable-crypto-auth' '--disable-ntlm-wb' '--enable-tls-srp' '--enable-unix-sockets' '--disable-cookies' '--enable-socketpair' '--disable-http-auth' '--disable-mime' '--disable-dateparse' '--disable-netrc' '--disable-progress-meter' '--enable-get-easy-options' '--disable-hsts' '--enable-code-coverage' '--enable-static' '--enable-fast-install'"
+CONFIGURE_OPTIONS = " '--with-openssl' '--disable-shared' '--disable-largefile' '--disable-libtool-lock' '--enable-silent-rules' '--enable-debug' '--disable-warnings' '--enable-curldebug' '--enable-symbol-hiding' '--disable-ares' '--disable-file' '--disable-ldap' '--disable-ldaps' '--disable-rtsp' '--disable-dict' '--enable-telnet' '--enable-tftp' '--enable-pop3' '--disable-imap' '--enable-smb' '--enable-smtp' '--disable-gopher' '--disable-mqtt' '--disable-manual' '--disable-versioned-symbols' '--disable-threaded-resolver' '--enable-pthreads' '--disable-verbose' '--disable-sspi' '--disable-crypto-auth' '--disable-ntlm-wb' '--enable-unix-sockets' '--enable-cookies' '--enable-socketpair' '--enable-http-auth' '--disable-doh' '--enable-mime' '--disable-dnsshuffle' '--disable-get-easy-options' '--disable-alt-svc' '--enable-hsts' '--enable-hidden-symbols' '--enable-code-coverage' '--enable-static' '--enable-fast-install' '--enable-libgcc'"
 CPP = gcc -E
 CPPFLAGS = -DNDEBUG
 CPPFLAG_CURL_STATICLIB = -DCURL_STATICLIB
@@ -1042,24 +1042,24 @@ CURLVERSION = 7.78.0-DEV
 CURL_CA_BUNDLE = "/etc/pki/tls/certs/ca-bundle.crt"
 CURL_CFLAG_EXTRAS = 
 CURL_DISABLE_DICT = 1
-CURL_DISABLE_FILE = 
-CURL_DISABLE_FTP = 1
-CURL_DISABLE_GOPHER = 
+CURL_DISABLE_FILE = 1
+CURL_DISABLE_FTP = 
+CURL_DISABLE_GOPHER = 1
 CURL_DISABLE_HTTP = 
 CURL_DISABLE_IMAP = 1
 CURL_DISABLE_LDAP = 1
 CURL_DISABLE_LDAPS = 1
-CURL_DISABLE_MQTT = 
+CURL_DISABLE_MQTT = 1
 CURL_DISABLE_POP3 = 
 CURL_DISABLE_PROXY = 
 CURL_DISABLE_RTSP = 1
 CURL_DISABLE_SMB = 
-CURL_DISABLE_SMTP = 1
+CURL_DISABLE_SMTP = 
 CURL_DISABLE_TELNET = 
 CURL_DISABLE_TFTP = 
-CURL_LT_SHLIB_VERSIONED_FLAVOUR = OPENSSL_
-CURL_NETWORK_AND_TIME_LIBS = -lgcov
-CURL_NETWORK_LIBS = -lgcov
+CURL_LT_SHLIB_VERSIONED_FLAVOUR = 
+CURL_NETWORK_AND_TIME_LIBS = -lgcc -lgcov
+CURL_NETWORK_LIBS = -lgcc -lgcov
 CURL_WITH_MULTI_SSL = 
 CYGPATH_W = echo
 DEFAULT_SSL_BACKEND = no
@@ -1095,9 +1095,9 @@ INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
 IPV6_ENABLED = 1
 LCOV = lcov
 LD = /usr/bin/ld -m elf_x86_64
-LDFLAGS = -L/usr/usr/lib64
-LIBCURL_LIBS = -lcares -lssl -lcrypto -lssl -lcrypto -lzstd -lz -lgcov
-LIBCURL_NO_SHARED = -lcares  -lssl -lcrypto -lssl -lcrypto  -lzstd  -lz  -lgcov
+LDFLAGS = 
+LIBCURL_LIBS = -lssl -lcrypto -lssl -lcrypto -lzstd -lz -lgcc -lgcov
+LIBCURL_NO_SHARED = -lssl -lcrypto -lssl -lcrypto  -lzstd  -lz -lgcc  -lgcov
 LIBOBJS = 
 
 # Prevent LIBS from being used for all link targets
@@ -1143,9 +1143,9 @@ SSL_BACKENDS = OpenSSL
 SSL_ENABLED = 1
 SSL_LIBS = -lssl -lcrypto 
 STRIP = strip
-SUPPORT_FEATURES = AsynchDNS HSTS HTTPS-proxy IPv6 Largefile NTLM SSL TLS-SRP UnixSockets alt-svc libz zstd
-SUPPORT_PROTOCOLS = FILE GOPHER GOPHERS HTTP HTTPS MQTT POP3 POP3S SMB SMBS TELNET TFTP
-USE_ARES = 1
+SUPPORT_FEATURES = HSTS HTTPS-proxy IPv6 Largefile SSL TLS-SRP UnixSockets libz zstd
+SUPPORT_PROTOCOLS = FTP FTPS HTTP HTTPS POP3 POP3S SMTP SMTPS TELNET TFTP
+USE_ARES = 
 USE_BEARSSL = 
 USE_GNUTLS = 
 USE_HYPER = 
@@ -1248,7 +1248,7 @@ LIBDIR = $(top_builddir)/lib
 #LDADD = $(LIBDIR)/libcurl.la
 
 # Dependencies
-LDADD = $(LIBDIR)/libcurl.la -lcares -lssl -lcrypto -lssl -lcrypto -lzstd -lz -lgcov
+LDADD = $(LIBDIR)/libcurl.la -lssl -lcrypto -lssl -lcrypto -lzstd -lz -lgcc -lgcov
 
 # These examples require external dependencies that may not be commonly
 # available on POSIX systems, so don't bother attempting to compile them here.
