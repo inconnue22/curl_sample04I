@@ -1,1 +1,4 @@
-Warning: compression requested but Gzip is not available
+multi.c: In function ‘multi_wait’:
+multi.c:1086:34: warning: unused parameter ‘use_wakeup’ [-Wunused-parameter]
+ 1086 |                             bool use_wakeup)
+      |                                  ^
