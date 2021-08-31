@@ -17,7 +17,7 @@ old_library='libcurlu.a'
 inherited_linker_flags=''
 
 # Libraries that this one depends upon.
-dependency_libs=' -lssl -lcrypto -lldap -llber -lzstd -lz'
+dependency_libs=' -lcares -lssl -lcrypto -lldap -llber -lzstd -lz -lgcc -L/usr/usr/lib64'
 
 # Names of additional weak libraries provided by this library
 weak_library_names=''
