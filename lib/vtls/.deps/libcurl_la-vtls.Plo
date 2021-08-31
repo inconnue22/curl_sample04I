@@ -79,9 +79,9 @@ vtls/libcurl_la-vtls.lo: vtls/vtls.c /usr/include/stdc-predef.h \
  vtls/bearssl.h vtls/rustls.h ../lib/slist.h ../lib/sendf.h \
  ../lib/strcase.h ../lib/url.h ../lib/progress.h ../lib/share.h \
  ../lib/urldata.h ../lib/multiif.h ../lib/timeval.h ../lib/curl_md5.h \
- ../lib/curl_hmac.h ../lib/warnless.h ../lib/curl_base64.h \
- ../lib/curl_printf.h ../include/curl/mprintf.h ../lib/strdup.h \
- ../lib/curl_memory.h ../lib/memdebug.h
+ ../lib/warnless.h ../lib/curl_base64.h ../lib/curl_printf.h \
+ ../include/curl/mprintf.h ../lib/strdup.h ../lib/curl_memory.h \
+ ../lib/memdebug.h
 /usr/include/stdc-predef.h:
 ../lib/curl_setup.h:
 ../lib/curl_config.h:
@@ -266,7 +266,6 @@ vtls/rustls.h:
 ../lib/multiif.h:
 ../lib/timeval.h:
 ../lib/curl_md5.h:
-../lib/curl_hmac.h:
 ../lib/warnless.h:
 ../lib/curl_base64.h:
 ../lib/curl_printf.h:
