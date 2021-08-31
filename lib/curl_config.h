@@ -2,7 +2,7 @@
 /* lib/curl_config.h.in.  Generated from configure.ac by autoheader.  */
 
 /* to enable curl debug memory tracking */
-/* #undef CURLDEBUG */
+#define CURLDEBUG 1
 
 /* Location of default ca bundle */
 #define CURL_CA_BUNDLE "/etc/pki/tls/certs/ca-bundle.crt"
@@ -17,10 +17,10 @@
 /* #undef CURL_DEFAULT_SSL_BACKEND */
 
 /* disable alt-svc */
-#define CURL_DISABLE_ALTSVC 1
+/* #undef CURL_DISABLE_ALTSVC */
 
 /* to disable cookies support */
-/* #undef CURL_DISABLE_COOKIES */
+#define CURL_DISABLE_COOKIES 1
 
 /* to disable cryptographic authentication */
 #define CURL_DISABLE_CRYPTO_AUTH 1
@@ -29,13 +29,13 @@
 /* #undef CURL_DISABLE_DICT */
 
 /* disable DoH */
-/* #undef CURL_DISABLE_DOH */
+#define CURL_DISABLE_DOH 1
 
 /* to disable FILE */
 #define CURL_DISABLE_FILE 1
 
 /* to disable FTP */
-#define CURL_DISABLE_FTP 1
+/* #undef CURL_DISABLE_FTP */
 
 /* to disable curl_easy_options */
 #define CURL_DISABLE_GETOPTIONS 1
@@ -50,22 +50,22 @@
 /* #undef CURL_DISABLE_HTTP */
 
 /* disable HTTP authentication */
-#define CURL_DISABLE_HTTP_AUTH 1
+/* #undef CURL_DISABLE_HTTP_AUTH */
 
 /* to disable IMAP */
-#define CURL_DISABLE_IMAP 1
+/* #undef CURL_DISABLE_IMAP */
 
 /* to disable LDAP */
-#define CURL_DISABLE_LDAP 1
+/* #undef CURL_DISABLE_LDAP */
 
 /* to disable LDAPS */
-#define CURL_DISABLE_LDAPS 1
+/* #undef CURL_DISABLE_LDAPS */
 
 /* to disable --libcurl C code generation option */
-#define CURL_DISABLE_LIBCURL_OPTION 1
+/* #undef CURL_DISABLE_LIBCURL_OPTION */
 
 /* disable mime API */
-/* #undef CURL_DISABLE_MIME */
+#define CURL_DISABLE_MIME 1
 
 /* to disable MQTT */
 /* #undef CURL_DISABLE_MQTT */
@@ -77,19 +77,19 @@
 /* #undef CURL_DISABLE_NTLM */
 
 /* if the OpenSSL configuration won't be loaded automatically */
-/* #undef CURL_DISABLE_OPENSSL_AUTO_LOAD_CONFIG */
+#define CURL_DISABLE_OPENSSL_AUTO_LOAD_CONFIG 1
 
 /* disable date parsing */
-/* #undef CURL_DISABLE_PARSEDATE */
+#define CURL_DISABLE_PARSEDATE 1
 
 /* to disable POP3 */
 /* #undef CURL_DISABLE_POP3 */
 
 /* disable progress-meter */
-/* #undef CURL_DISABLE_PROGRESS_METER */
+#define CURL_DISABLE_PROGRESS_METER 1
 
 /* to disable proxies */
-#define CURL_DISABLE_PROXY 1
+/* #undef CURL_DISABLE_PROXY */
 
 /* to disable RTSP */
 /* #undef CURL_DISABLE_RTSP */
@@ -101,13 +101,13 @@
 /* #undef CURL_DISABLE_SMB */
 
 /* to disable SMTP */
-#define CURL_DISABLE_SMTP 1
+/* #undef CURL_DISABLE_SMTP */
 
 /* to disable socketpair support */
 #define CURL_DISABLE_SOCKETPAIR 1
 
 /* to disable TELNET */
-/* #undef CURL_DISABLE_TELNET */
+#define CURL_DISABLE_TELNET 1
 
 /* to disable TFTP */
 /* #undef CURL_DISABLE_TFTP */
@@ -116,7 +116,7 @@
 #define CURL_DISABLE_VERBOSE_STRINGS 1
 
 /* Definition to make a library symbol externally visible. */
-#define CURL_EXTERN_SYMBOL __attribute__ ((__visibility__ ("default")))
+/* #undef CURL_EXTERN_SYMBOL */
 
 /* IP address type in sockaddr */
 #define CURL_SA_FAMILY_T sa_family_t
@@ -358,25 +358,25 @@
 /* #undef HAVE_IO_H */
 
 /* Define to 1 if you have the lber.h header file. */
-/* #undef HAVE_LBER_H */
+#define HAVE_LBER_H 1
 
 /* Define to 1 if you have the ldapssl.h header file. */
 /* #undef HAVE_LDAPSSL_H */
 
 /* Define to 1 if you have the ldap.h header file. */
-/* #undef HAVE_LDAP_H */
+#define HAVE_LDAP_H 1
 
 /* Define to 1 if you have the `ldap_init_fd' function. */
-/* #undef HAVE_LDAP_INIT_FD */
+#define HAVE_LDAP_INIT_FD 1
 
 /* Use LDAPS implementation */
-/* #undef HAVE_LDAP_SSL */
+#define HAVE_LDAP_SSL 1
 
 /* Define to 1 if you have the ldap_ssl.h header file. */
 /* #undef HAVE_LDAP_SSL_H */
 
 /* Define to 1 if you have the `ldap_url_parse' function. */
-/* #undef HAVE_LDAP_URL_PARSE */
+#define HAVE_LDAP_URL_PARSE 1
 
 /* Define to 1 if you have the `brotlidec' library (-lbrotlidec). */
 /* #undef HAVE_LIBBROTLIDEC */
@@ -992,7 +992,7 @@
 /* #undef USE_NSS */
 
 /* Use OpenLDAP-specific code */
-/* #undef USE_OPENLDAP */
+#define USE_OPENLDAP 1
 
 /* if OpenSSL is in use */
 #define USE_OPENSSL 1
@@ -1019,7 +1019,7 @@
 #define USE_TLS_SRP 1
 
 /* Use Unix domain sockets */
-#define USE_UNIX_SOCKETS 1
+/* #undef USE_UNIX_SOCKETS */
 
 /* Define to 1 if you are building a Windows target with crypto API support.
    */
