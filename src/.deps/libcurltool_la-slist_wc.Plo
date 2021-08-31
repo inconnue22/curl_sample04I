@@ -59,8 +59,7 @@ libcurltool_la-slist_wc.lo: slist_wc.c /usr/include/stdc-predef.h \
  /usr/include/unistd.h /usr/include/bits/posix_opt.h \
  /usr/include/bits/environments.h /usr/include/bits/confname.h \
  /usr/include/bits/getopt_posix.h /usr/include/bits/getopt_core.h \
- /usr/include/bits/unistd_ext.h ../lib/curl_ctype.h ../lib/curl_setup.h \
- slist_wc.h ../lib/memdebug.h
+ /usr/include/bits/unistd_ext.h ../lib/curl_ctype.h ../lib/curl_setup.h
 /usr/include/stdc-predef.h:
 tool_setup.h:
 ../lib/curl_setup.h:
@@ -178,5 +177,3 @@ tool_setup.h:
 /usr/include/bits/unistd_ext.h:
 ../lib/curl_ctype.h:
 ../lib/curl_setup.h:
-slist_wc.h:
-../lib/memdebug.h:
