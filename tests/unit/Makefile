@@ -592,9 +592,9 @@ AWK = gawk
 BLANK_AT_MAKETIME = 
 CC = gcc
 CCDEPMODE = depmode=gcc3
-CFLAGS = -g -fprofile-arcs -ftest-coverage -Werror-implicit-function-declaration -O0 -pedantic -Wall -W -Wpointer-arith -Wwrite-strings -Wunused -Wshadow -Winline -Wnested-externs -Wmissing-declarations -Wmissing-prototypes -Wno-long-long -Wbad-function-cast -Wfloat-equal -Wno-multichar -Wsign-compare -Wundef -Wno-format-nonliteral -Wendif-labels -Wstrict-prototypes -Wdeclaration-after-statement -Wold-style-definition -Wstrict-aliasing=3 -Wcast-align -Wtype-limits -Wold-style-declaration -Wmissing-parameter-type -Wempty-body -Wclobbered -Wignored-qualifiers -Wconversion -Wno-sign-conversion -Wvla -ftree-vrp -Wdouble-promotion -Wformat=2 -Warray-bounds=2 -Wshift-negative-value -Wshift-overflow=2 -Wnull-dereference -fdelete-null-pointer-checks -Wduplicated-cond -Wunused-const-variable -Wduplicated-branches -Wrestrict -Walloc-zero -Wformat-overflow=2 -Wformat-truncation=2 -Wimplicit-fallthrough=4 -Wno-system-headers -Wenum-conversion -pthread 
+CFLAGS = -g -fprofile-arcs -ftest-coverage -Werror-implicit-function-declaration -O2 -Wno-system-headers -Wenum-conversion 
 CFLAG_CURL_SYMBOL_HIDING = -fvisibility=hidden
-CONFIGURE_OPTIONS = " '--with-openssl' '--disable-shared' '--disable-largefile' '--disable-libtool-lock' '--disable-silent-rules' '--disable-optimize' '--enable-warnings' '--enable-curldebug' '--enable-symbol-hiding' '--disable-ares' '--enable-dependency-tracking' '--enable-http' '--enable-ldap' '--enable-ldaps' '--enable-rtsp' '--enable-proxy' '--enable-dict' '--enable-telnet' '--disable-tftp' '--disable-pop3' '--disable-imap' '--disable-smb' '--disable-smtp' '--enable-mqtt' '--enable-libcurl-option' '--enable-ipv6' '--disable-versioned-symbols' '--disable-sspi' '--disable-crypto-auth' '--disable-tls-srp' '--disable-unix-sockets' '--disable-cookies' '--disable-doh' '--enable-mime' '--disable-netrc' '--enable-progress-meter' '--disable-alt-svc' '--enable-hidden-symbols' '--enable-code-coverage' '--enable-fast-install' '--enable-libgcc'"
+CONFIGURE_OPTIONS = " '--with-openssl' '--disable-shared' '--disable-silent-rules' '--disable-debug' '--enable-optimize' '--disable-warnings' '--enable-curldebug' '--enable-ares' '--disable-http' '--disable-ftp' '--enable-file' '--enable-ldap' '--enable-ldaps' '--enable-proxy' '--enable-dict' '--enable-tftp' '--disable-pop3' '--enable-imap' '--disable-smb' '--disable-smtp' '--disable-mqtt' '--disable-manual' '--enable-libcurl-option' '--disable-ipv6' '--enable-openssl-auto-load-config' '--enable-versioned-symbols' '--disable-threaded-resolver' '--enable-verbose' '--disable-crypto-auth' '--disable-ntlm-wb' '--enable-tls-srp' '--enable-unix-sockets' '--enable-cookies' '--enable-socketpair' '--disable-mime' '--enable-netrc' '--disable-progress-meter' '--enable-dnsshuffle' '--disable-get-easy-options' '--disable-alt-svc' '--enable-hsts' '--enable-hidden-symbols' '--enable-code-coverage' '--enable-libgcc'"
 CPP = gcc -E
 CPPFLAGS = -DNDEBUG
 CPPFLAG_CURL_STATICLIB = -DCURL_STATICLIB
@@ -603,21 +603,21 @@ CURL_CA_BUNDLE = "/etc/pki/tls/certs/ca-bundle.crt"
 CURL_CFLAG_EXTRAS = 
 CURL_DISABLE_DICT = 
 CURL_DISABLE_FILE = 
-CURL_DISABLE_FTP = 
+CURL_DISABLE_FTP = 1
 CURL_DISABLE_GOPHER = 
-CURL_DISABLE_HTTP = 
-CURL_DISABLE_IMAP = 1
+CURL_DISABLE_HTTP = 1
+CURL_DISABLE_IMAP = 
 CURL_DISABLE_LDAP = 
 CURL_DISABLE_LDAPS = 
-CURL_DISABLE_MQTT = 
+CURL_DISABLE_MQTT = 1
 CURL_DISABLE_POP3 = 1
 CURL_DISABLE_PROXY = 
-CURL_DISABLE_RTSP = 
+CURL_DISABLE_RTSP = 1
 CURL_DISABLE_SMB = 1
 CURL_DISABLE_SMTP = 1
 CURL_DISABLE_TELNET = 
-CURL_DISABLE_TFTP = 1
-CURL_LT_SHLIB_VERSIONED_FLAVOUR = 
+CURL_DISABLE_TFTP = 
+CURL_LT_SHLIB_VERSIONED_FLAVOUR = OPENSSL_
 CURL_NETWORK_AND_TIME_LIBS = -lgcc -lgcov
 CURL_NETWORK_LIBS = -lgcc -lgcov
 CURL_WITH_MULTI_SSL = 
@@ -652,12 +652,12 @@ INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
-IPV6_ENABLED = 1
+IPV6_ENABLED = 
 LCOV = lcov
 LD = /usr/bin/ld -m elf_x86_64
-LDFLAGS = 
-LIBCURL_LIBS = -lssl -lcrypto -lssl -lcrypto -lldap -llber -lzstd -lz -lgcc -lgcov -pthread
-LIBCURL_NO_SHARED = -lssl -lcrypto -lssl -lcrypto  -lldap -llber -lzstd  -lz -lgcc  -lgcov -pthread
+LDFLAGS = -L/usr/usr/lib64
+LIBCURL_LIBS = -lcares -lssl -lcrypto -lssl -lcrypto -lldap -llber -lzstd -lz -lgcc -lgcov
+LIBCURL_NO_SHARED = -lcares  -lssl -lcrypto -lssl -lcrypto  -lldap -llber -lzstd  -lz -lgcc  -lgcov
 LIBOBJS = 
 
 # Prevent LIBS from being used for all link targets
@@ -703,9 +703,9 @@ SSL_BACKENDS = OpenSSL
 SSL_ENABLED = 1
 SSL_LIBS = -lssl -lcrypto 
 STRIP = strip
-SUPPORT_FEATURES = AsynchDNS HSTS HTTPS-proxy IPv6 Largefile SSL libz zstd
-SUPPORT_PROTOCOLS = DICT FILE FTP FTPS GOPHER GOPHERS HTTP HTTPS LDAP LDAPS MQTT RTSP TELNET
-USE_ARES = 
+SUPPORT_FEATURES = AsynchDNS HTTPS-proxy Largefile SSL TLS-SRP UnixSockets libz zstd
+SUPPORT_PROTOCOLS = DICT FILE GOPHER GOPHERS IMAP IMAPS LDAP LDAPS TELNET TFTP
+USE_ARES = 1
 USE_BEARSSL = 
 USE_GNUTLS = 
 USE_HYPER = 
@@ -725,7 +725,7 @@ USE_QUICHE =
 USE_RUSTLS = 
 USE_SCHANNEL = 
 USE_SECTRANSP = 
-USE_UNIX_SOCKETS = 
+USE_UNIX_SOCKETS = 1
 USE_WIN32_CRYPTO = 
 USE_WIN32_LARGE_FILES = 
 USE_WIN32_SMALL_FILES = 
@@ -841,7 +841,7 @@ AM_CPPFLAGS = -I$(top_srcdir)/include \
 EXTRA_DIST = Makefile.inc CMakeLists.txt README.md
 LDADD = $(top_builddir)/src/libcurltool.la   \
         $(top_builddir)/lib/libcurlu.la      \
-         -lssl -lcrypto -lssl -lcrypto -lldap -llber -lzstd -lz -lgcc -lgcov -pthread
+        -L/usr/usr/lib64 -lcares -lssl -lcrypto -lssl -lcrypto -lldap -llber -lzstd -lz -lgcc -lgcov
 
 UNITFILES = curlcheck.h \
  ../libtest/test.h \
@@ -883,7 +883,7 @@ unit1330_SOURCES = unit1330.c $(UNITFILES)
 unit1330_CPPFLAGS = $(AM_CPPFLAGS)
 unit1394_SOURCES = unit1394.c $(UNITFILES)
 unit1394_CPPFLAGS = $(AM_CPPFLAGS)
-unit1394_LDADD = $(top_builddir)/lib/libcurl.la -lssl -lcrypto -lssl -lcrypto -lldap -llber -lzstd -lz -lgcc -lgcov -pthread
+unit1394_LDADD = $(top_builddir)/lib/libcurl.la -lcares -lssl -lcrypto -lssl -lcrypto -lldap -llber -lzstd -lz -lgcc -lgcov
 unit1394_LDFLAGS = $(top_builddir)/src/libcurltool.la
 unit1394_LIBS = 
 unit1395_SOURCES = unit1395.c $(UNITFILES)
