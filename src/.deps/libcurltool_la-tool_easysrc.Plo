@@ -60,11 +60,7 @@ libcurltool_la-tool_easysrc.lo: tool_easysrc.c /usr/include/stdc-predef.h \
  /usr/include/bits/environments.h /usr/include/bits/confname.h \
  /usr/include/bits/getopt_posix.h /usr/include/bits/getopt_core.h \
  /usr/include/bits/unistd_ext.h ../lib/curl_ctype.h ../lib/curl_setup.h \
- slist_wc.h ../lib/curlx.h ../include/curl/mprintf.h ../lib/strcase.h \
- ../lib/strtoofft.h ../lib/nonblock.h ../lib/warnless.h \
- ../lib/curl_multibyte.h ../lib/version_win32.h tool_cfgable.h \
- tool_sdecls.h tool_urlglob.h tool_formparse.h tool_easysrc.h tool_msgs.h \
- ../lib/memdebug.h
+ slist_wc.h
 /usr/include/stdc-predef.h:
 tool_setup.h:
 ../lib/curl_setup.h:
@@ -183,18 +179,3 @@ tool_setup.h:
 ../lib/curl_ctype.h:
 ../lib/curl_setup.h:
 slist_wc.h:
-../lib/curlx.h:
-../include/curl/mprintf.h:
-../lib/strcase.h:
-../lib/strtoofft.h:
-../lib/nonblock.h:
-../lib/warnless.h:
-../lib/curl_multibyte.h:
-../lib/version_win32.h:
-tool_cfgable.h:
-tool_sdecls.h:
-tool_urlglob.h:
-tool_formparse.h:
-tool_easysrc.h:
-tool_msgs.h:
-../lib/memdebug.h:
