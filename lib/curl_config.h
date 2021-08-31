@@ -17,7 +17,7 @@
 /* #undef CURL_DEFAULT_SSL_BACKEND */
 
 /* disable alt-svc */
-/* #undef CURL_DISABLE_ALTSVC */
+#define CURL_DISABLE_ALTSVC 1
 
 /* to disable cookies support */
 #define CURL_DISABLE_COOKIES 1
@@ -26,7 +26,7 @@
 #define CURL_DISABLE_CRYPTO_AUTH 1
 
 /* to disable DICT */
-#define CURL_DISABLE_DICT 1
+/* #undef CURL_DISABLE_DICT */
 
 /* disable DoH */
 #define CURL_DISABLE_DOH 1
@@ -50,10 +50,10 @@
 /* #undef CURL_DISABLE_HTTP */
 
 /* disable HTTP authentication */
-#define CURL_DISABLE_HTTP_AUTH 1
+/* #undef CURL_DISABLE_HTTP_AUTH */
 
 /* to disable IMAP */
-/* #undef CURL_DISABLE_IMAP */
+#define CURL_DISABLE_IMAP 1
 
 /* to disable LDAP */
 /* #undef CURL_DISABLE_LDAP */
@@ -65,13 +65,13 @@
 /* #undef CURL_DISABLE_LIBCURL_OPTION */
 
 /* disable mime API */
-#define CURL_DISABLE_MIME 1
+/* #undef CURL_DISABLE_MIME */
 
 /* to disable MQTT */
 /* #undef CURL_DISABLE_MQTT */
 
 /* disable netrc parsing */
-/* #undef CURL_DISABLE_NETRC */
+#define CURL_DISABLE_NETRC 1
 
 /* to disable NTLM support */
 /* #undef CURL_DISABLE_NTLM */
@@ -83,7 +83,7 @@
 /* #undef CURL_DISABLE_PARSEDATE */
 
 /* to disable POP3 */
-/* #undef CURL_DISABLE_POP3 */
+#define CURL_DISABLE_POP3 1
 
 /* disable progress-meter */
 /* #undef CURL_DISABLE_PROGRESS_METER */
@@ -95,13 +95,13 @@
 /* #undef CURL_DISABLE_RTSP */
 
 /* disable DNS shuffling */
-#define CURL_DISABLE_SHUFFLE_DNS 1
+/* #undef CURL_DISABLE_SHUFFLE_DNS */
 
 /* to disable SMB/CIFS */
-/* #undef CURL_DISABLE_SMB */
+#define CURL_DISABLE_SMB 1
 
 /* to disable SMTP */
-/* #undef CURL_DISABLE_SMTP */
+#define CURL_DISABLE_SMTP 1
 
 /* to disable socketpair support */
 /* #undef CURL_DISABLE_SOCKETPAIR */
@@ -110,13 +110,13 @@
 /* #undef CURL_DISABLE_TELNET */
 
 /* to disable TFTP */
-/* #undef CURL_DISABLE_TFTP */
+#define CURL_DISABLE_TFTP 1
 
 /* to disable verbose strings */
 /* #undef CURL_DISABLE_VERBOSE_STRINGS */
 
 /* Definition to make a library symbol externally visible. */
-/* #undef CURL_EXTERN_SYMBOL */
+#define CURL_EXTERN_SYMBOL __attribute__ ((__visibility__ ("default")))
 
 /* IP address type in sockaddr */
 #define CURL_SA_FAMILY_T sa_family_t
@@ -131,7 +131,7 @@
 /* #undef EGD_SOCKET */
 
 /* Define if you want to enable IPv6 support */
-/* #undef ENABLE_IPV6 */
+#define ENABLE_IPV6 1
 
 /* Define to the type of arg 2 for gethostname. */
 #define GETHOSTNAME_TYPE_ARG2 size_t
@@ -530,7 +530,7 @@
 /* #undef HAVE_PROTO_BSDSOCKET_H */
 
 /* if you have <pthread.h> */
-/* #undef HAVE_PTHREAD_H */
+#define HAVE_PTHREAD_H 1
 
 /* Define to 1 if you have the <pwd.h> header file. */
 #define HAVE_PWD_H 1
@@ -596,7 +596,7 @@
 /* #undef HAVE_SIG_ATOMIC_T_VOLATILE */
 
 /* Define to 1 if struct sockaddr_in6 has the sin6_scope_id member */
-/* #undef HAVE_SOCKADDR_IN6_SIN6_SCOPE_ID */
+#define HAVE_SOCKADDR_IN6_SIN6_SCOPE_ID 1
 
 /* Define to 1 if you have the socket function. */
 #define HAVE_SOCKET 1
@@ -935,7 +935,7 @@
 /* #undef USE_AMISSL */
 
 /* Define to enable c-ares support */
-#define USE_ARES 1
+/* #undef USE_ARES */
 
 /* if BearSSL is enabled */
 /* #undef USE_BEARSSL */
@@ -1010,7 +1010,7 @@
 /* #undef USE_SECTRANSP */
 
 /* if you want POSIX threaded DNS lookup */
-/* #undef USE_THREADS_POSIX */
+#define USE_THREADS_POSIX 1
 
 /* if you want Win32 threaded DNS lookup */
 /* #undef USE_THREADS_WIN32 */
@@ -1019,7 +1019,7 @@
 /* #undef USE_TLS_SRP */
 
 /* Use Unix domain sockets */
-#define USE_UNIX_SOCKETS 1
+/* #undef USE_UNIX_SOCKETS */
 
 /* Define to 1 if you are building a Windows target with crypto API support.
    */
