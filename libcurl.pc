@@ -27,13 +27,13 @@ prefix=/usr/local
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include
-supported_protocols="DICT FILE GOPHER GOPHERS HTTP HTTPS IMAP IMAPS LDAP SMB SMBS SMTP SMTPS TFTP"
-supported_features="HSTS HTTPS-proxy Largefile NTLM SSL TLS-SRP UnixSockets alt-svc libz zstd"
+supported_protocols="DICT FILE FTP FTPS HTTP HTTPS IMAP IMAPS LDAP LDAPS POP3 POP3S SMB SMBS TELNET TFTP"
+supported_features="AsynchDNS HSTS IPv6 Largefile NTLM SSL UnixSockets libz zstd"
 
 Name: libcurl
 URL: https://curl.se/
 Description: Library to transfer files with ftp, http, etc.
 Version: 7.78.0-DEV
-Libs: -L${libdir} -lcurl -lssl -lcrypto -lssl -lcrypto  -lldap -llber -lzstd  -lz  -lgcov
-Libs.private: -lssl -lcrypto -lssl -lcrypto -lldap -llber -lzstd -lz -lgcov
+Libs: -L${libdir} -lcurl -lssl -lcrypto -lssl -lcrypto  -lldap -llber -lzstd  -lz  -lgcov -pthread
+Libs.private: -lssl -lcrypto -lssl -lcrypto -lldap -llber -lzstd -lz -lgcov -pthread
 Cflags: -I${includedir} -DCURL_STATICLIB
