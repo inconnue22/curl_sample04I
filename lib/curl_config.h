@@ -2,7 +2,7 @@
 /* lib/curl_config.h.in.  Generated from configure.ac by autoheader.  */
 
 /* to enable curl debug memory tracking */
-#define CURLDEBUG 1
+/* #undef CURLDEBUG */
 
 /* Location of default ca bundle */
 #define CURL_CA_BUNDLE "/etc/pki/tls/certs/ca-bundle.crt"
@@ -17,13 +17,13 @@
 /* #undef CURL_DEFAULT_SSL_BACKEND */
 
 /* disable alt-svc */
-#define CURL_DISABLE_ALTSVC 1
+/* #undef CURL_DISABLE_ALTSVC */
 
 /* to disable cookies support */
 /* #undef CURL_DISABLE_COOKIES */
 
 /* to disable cryptographic authentication */
-#define CURL_DISABLE_CRYPTO_AUTH 1
+/* #undef CURL_DISABLE_CRYPTO_AUTH */
 
 /* to disable DICT */
 /* #undef CURL_DISABLE_DICT */
@@ -35,19 +35,19 @@
 /* #undef CURL_DISABLE_FILE */
 
 /* to disable FTP */
-#define CURL_DISABLE_FTP 1
+/* #undef CURL_DISABLE_FTP */
 
 /* to disable curl_easy_options */
-#define CURL_DISABLE_GETOPTIONS 1
+/* #undef CURL_DISABLE_GETOPTIONS */
 
 /* to disable Gopher */
 /* #undef CURL_DISABLE_GOPHER */
 
 /* disable alt-svc */
-#define CURL_DISABLE_HSTS 1
+/* #undef CURL_DISABLE_HSTS */
 
 /* to disable HTTP */
-#define CURL_DISABLE_HTTP 1
+/* #undef CURL_DISABLE_HTTP */
 
 /* disable HTTP authentication */
 /* #undef CURL_DISABLE_HTTP_AUTH */
@@ -56,19 +56,19 @@
 /* #undef CURL_DISABLE_IMAP */
 
 /* to disable LDAP */
-/* #undef CURL_DISABLE_LDAP */
+#define CURL_DISABLE_LDAP 1
 
 /* to disable LDAPS */
-/* #undef CURL_DISABLE_LDAPS */
+#define CURL_DISABLE_LDAPS 1
 
 /* to disable --libcurl C code generation option */
 /* #undef CURL_DISABLE_LIBCURL_OPTION */
 
 /* disable mime API */
-#define CURL_DISABLE_MIME 1
+/* #undef CURL_DISABLE_MIME */
 
 /* to disable MQTT */
-#define CURL_DISABLE_MQTT 1
+/* #undef CURL_DISABLE_MQTT */
 
 /* disable netrc parsing */
 /* #undef CURL_DISABLE_NETRC */
@@ -77,10 +77,10 @@
 /* #undef CURL_DISABLE_NTLM */
 
 /* if the OpenSSL configuration won't be loaded automatically */
-/* #undef CURL_DISABLE_OPENSSL_AUTO_LOAD_CONFIG */
+#define CURL_DISABLE_OPENSSL_AUTO_LOAD_CONFIG 1
 
 /* disable date parsing */
-/* #undef CURL_DISABLE_PARSEDATE */
+#define CURL_DISABLE_PARSEDATE 1
 
 /* to disable POP3 */
 #define CURL_DISABLE_POP3 1
@@ -92,7 +92,7 @@
 /* #undef CURL_DISABLE_PROXY */
 
 /* to disable RTSP */
-#define CURL_DISABLE_RTSP 1
+/* #undef CURL_DISABLE_RTSP */
 
 /* disable DNS shuffling */
 /* #undef CURL_DISABLE_SHUFFLE_DNS */
@@ -131,7 +131,7 @@
 /* #undef EGD_SOCKET */
 
 /* Define if you want to enable IPv6 support */
-/* #undef ENABLE_IPV6 */
+#define ENABLE_IPV6 1
 
 /* Define to the type of arg 2 for gethostname. */
 #define GETHOSTNAME_TYPE_ARG2 size_t
@@ -358,25 +358,25 @@
 /* #undef HAVE_IO_H */
 
 /* Define to 1 if you have the lber.h header file. */
-#define HAVE_LBER_H 1
+/* #undef HAVE_LBER_H */
 
 /* Define to 1 if you have the ldapssl.h header file. */
 /* #undef HAVE_LDAPSSL_H */
 
 /* Define to 1 if you have the ldap.h header file. */
-#define HAVE_LDAP_H 1
+/* #undef HAVE_LDAP_H */
 
 /* Define to 1 if you have the `ldap_init_fd' function. */
-#define HAVE_LDAP_INIT_FD 1
+/* #undef HAVE_LDAP_INIT_FD */
 
 /* Use LDAPS implementation */
-#define HAVE_LDAP_SSL 1
+/* #undef HAVE_LDAP_SSL */
 
 /* Define to 1 if you have the ldap_ssl.h header file. */
 /* #undef HAVE_LDAP_SSL_H */
 
 /* Define to 1 if you have the `ldap_url_parse' function. */
-#define HAVE_LDAP_URL_PARSE 1
+/* #undef HAVE_LDAP_URL_PARSE */
 
 /* Define to 1 if you have the `brotlidec' library (-lbrotlidec). */
 /* #undef HAVE_LIBBROTLIDEC */
@@ -596,7 +596,7 @@
 /* #undef HAVE_SIG_ATOMIC_T_VOLATILE */
 
 /* Define to 1 if struct sockaddr_in6 has the sin6_scope_id member */
-/* #undef HAVE_SOCKADDR_IN6_SIN6_SCOPE_ID */
+#define HAVE_SOCKADDR_IN6_SIN6_SCOPE_ID 1
 
 /* Define to 1 if you have the socket function. */
 #define HAVE_SOCKET 1
@@ -821,10 +821,10 @@
 /* #undef NEED_THREAD_SAFE */
 
 /* Define to enable NTLM delegation to winbind's ntlm_auth helper. */
-/* #undef NTLM_WB_ENABLED */
+#define NTLM_WB_ENABLED 1
 
 /* Define absolute filename for winbind's ntlm_auth helper. */
-/* #undef NTLM_WB_FILE */
+#define NTLM_WB_FILE "/usr/bin/ntlm_auth"
 
 /* cpu-machine-OS */
 #define OS "x86_64-pc-linux-gnu"
@@ -992,7 +992,7 @@
 /* #undef USE_NSS */
 
 /* Use OpenLDAP-specific code */
-#define USE_OPENLDAP 1
+/* #undef USE_OPENLDAP */
 
 /* if OpenSSL is in use */
 #define USE_OPENSSL 1
