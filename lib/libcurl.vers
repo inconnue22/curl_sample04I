@@ -6,7 +6,7 @@ HIDDEN
     _save*;
 };
 
-CURL_4
+CURL_OPENSSL_4
 {
   global: curl_*;
   local: *;
