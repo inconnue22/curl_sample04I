@@ -14,10 +14,10 @@ library_names=''
 old_library='libcurl.a'
 
 # Linker flags that cannot go in dependency_libs.
-inherited_linker_flags=''
+inherited_linker_flags=' -pthread'
 
 # Libraries that this one depends upon.
-dependency_libs=' -L/usr/usr/lib64 -lcares -lssl -lcrypto -lldap -llber -lzstd -lz -lgcc -lgcov'
+dependency_libs=' -lssl -lcrypto -lldap -llber -lzstd -lz -lgcov'
 
 # Names of additional weak libraries provided by this library
 weak_library_names=''
