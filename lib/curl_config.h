@@ -17,16 +17,16 @@
 /* #undef CURL_DEFAULT_SSL_BACKEND */
 
 /* disable alt-svc */
-#define CURL_DISABLE_ALTSVC 1
+/* #undef CURL_DISABLE_ALTSVC */
 
 /* to disable cookies support */
-/* #undef CURL_DISABLE_COOKIES */
+#define CURL_DISABLE_COOKIES 1
 
 /* to disable cryptographic authentication */
 /* #undef CURL_DISABLE_CRYPTO_AUTH */
 
 /* to disable DICT */
-#define CURL_DISABLE_DICT 1
+/* #undef CURL_DISABLE_DICT */
 
 /* disable DoH */
 /* #undef CURL_DISABLE_DOH */
@@ -35,7 +35,7 @@
 /* #undef CURL_DISABLE_FILE */
 
 /* to disable FTP */
-/* #undef CURL_DISABLE_FTP */
+#define CURL_DISABLE_FTP 1
 
 /* to disable curl_easy_options */
 /* #undef CURL_DISABLE_GETOPTIONS */
@@ -44,34 +44,34 @@
 /* #undef CURL_DISABLE_GOPHER */
 
 /* disable alt-svc */
-#define CURL_DISABLE_HSTS 1
+/* #undef CURL_DISABLE_HSTS */
 
 /* to disable HTTP */
-#define CURL_DISABLE_HTTP 1
+/* #undef CURL_DISABLE_HTTP */
 
 /* disable HTTP authentication */
 #define CURL_DISABLE_HTTP_AUTH 1
 
 /* to disable IMAP */
-#define CURL_DISABLE_IMAP 1
+/* #undef CURL_DISABLE_IMAP */
 
 /* to disable LDAP */
-#define CURL_DISABLE_LDAP 1
+/* #undef CURL_DISABLE_LDAP */
 
 /* to disable LDAPS */
 #define CURL_DISABLE_LDAPS 1
 
 /* to disable --libcurl C code generation option */
-/* #undef CURL_DISABLE_LIBCURL_OPTION */
+#define CURL_DISABLE_LIBCURL_OPTION 1
 
 /* disable mime API */
-#define CURL_DISABLE_MIME 1
+/* #undef CURL_DISABLE_MIME */
 
 /* to disable MQTT */
-/* #undef CURL_DISABLE_MQTT */
+#define CURL_DISABLE_MQTT 1
 
 /* disable netrc parsing */
-/* #undef CURL_DISABLE_NETRC */
+#define CURL_DISABLE_NETRC 1
 
 /* to disable NTLM support */
 /* #undef CURL_DISABLE_NTLM */
@@ -80,16 +80,16 @@
 /* #undef CURL_DISABLE_OPENSSL_AUTO_LOAD_CONFIG */
 
 /* disable date parsing */
-/* #undef CURL_DISABLE_PARSEDATE */
+#define CURL_DISABLE_PARSEDATE 1
 
 /* to disable POP3 */
-/* #undef CURL_DISABLE_POP3 */
+#define CURL_DISABLE_POP3 1
 
 /* disable progress-meter */
 #define CURL_DISABLE_PROGRESS_METER 1
 
 /* to disable proxies */
-#define CURL_DISABLE_PROXY 1
+/* #undef CURL_DISABLE_PROXY */
 
 /* to disable RTSP */
 #define CURL_DISABLE_RTSP 1
@@ -101,7 +101,7 @@
 /* #undef CURL_DISABLE_SMB */
 
 /* to disable SMTP */
-#define CURL_DISABLE_SMTP 1
+/* #undef CURL_DISABLE_SMTP */
 
 /* to disable socketpair support */
 /* #undef CURL_DISABLE_SOCKETPAIR */
@@ -116,7 +116,7 @@
 /* #undef CURL_DISABLE_VERBOSE_STRINGS */
 
 /* Definition to make a library symbol externally visible. */
-/* #undef CURL_EXTERN_SYMBOL */
+#define CURL_EXTERN_SYMBOL __attribute__ ((__visibility__ ("default")))
 
 /* IP address type in sockaddr */
 #define CURL_SA_FAMILY_T sa_family_t
@@ -125,7 +125,7 @@
 /* #undef CURL_WITH_MULTI_SSL */
 
 /* enable debug build options */
-/* #undef DEBUGBUILD */
+#define DEBUGBUILD 1
 
 /* your Entropy Gathering Daemon socket pathname */
 /* #undef EGD_SOCKET */
@@ -358,16 +358,16 @@
 /* #undef HAVE_IO_H */
 
 /* Define to 1 if you have the lber.h header file. */
-/* #undef HAVE_LBER_H */
+#define HAVE_LBER_H 1
 
 /* Define to 1 if you have the ldapssl.h header file. */
 /* #undef HAVE_LDAPSSL_H */
 
 /* Define to 1 if you have the ldap.h header file. */
-/* #undef HAVE_LDAP_H */
+#define HAVE_LDAP_H 1
 
 /* Define to 1 if you have the `ldap_init_fd' function. */
-/* #undef HAVE_LDAP_INIT_FD */
+#define HAVE_LDAP_INIT_FD 1
 
 /* Use LDAPS implementation */
 /* #undef HAVE_LDAP_SSL */
@@ -376,7 +376,7 @@
 /* #undef HAVE_LDAP_SSL_H */
 
 /* Define to 1 if you have the `ldap_url_parse' function. */
-/* #undef HAVE_LDAP_URL_PARSE */
+#define HAVE_LDAP_URL_PARSE 1
 
 /* Define to 1 if you have the `brotlidec' library (-lbrotlidec). */
 /* #undef HAVE_LIBBROTLIDEC */
@@ -935,7 +935,7 @@
 /* #undef USE_AMISSL */
 
 /* Define to enable c-ares support */
-#define USE_ARES 1
+/* #undef USE_ARES */
 
 /* if BearSSL is enabled */
 /* #undef USE_BEARSSL */
@@ -965,7 +965,7 @@
 /* #undef USE_LIBSSH2 */
 
 /* If you want to build curl with the built-in manual */
-/* #undef USE_MANUAL */
+#define USE_MANUAL 1
 
 /* if mbedTLS is enabled */
 /* #undef USE_MBEDTLS */
@@ -992,7 +992,7 @@
 /* #undef USE_NSS */
 
 /* Use OpenLDAP-specific code */
-/* #undef USE_OPENLDAP */
+#define USE_OPENLDAP 1
 
 /* if OpenSSL is in use */
 #define USE_OPENSSL 1
@@ -1016,7 +1016,7 @@
 /* #undef USE_THREADS_WIN32 */
 
 /* Use TLS-SRP authentication */
-/* #undef USE_TLS_SRP */
+#define USE_TLS_SRP 1
 
 /* Use Unix domain sockets */
 #define USE_UNIX_SOCKETS 1
