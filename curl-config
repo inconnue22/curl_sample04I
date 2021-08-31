@@ -84,13 +84,13 @@ while test $# -gt 0; do
         ;;
 
     --feature|--features)
-        for feature in AsynchDNS HSTS HTTPS-proxy IPv6 Largefile NTLM SSL TLS-SRP UnixSockets alt-svc libz zstd ""; do
+        for feature in AsynchDNS Largefile NTLM SSL UnixSockets libz zstd ""; do
             test -n "$feature" && echo "$feature"
         done
         ;;
 
     --protocols)
-        for protocol in FILE GOPHER GOPHERS HTTP HTTPS MQTT POP3 POP3S SMB SMBS TELNET TFTP; do
+        for protocol in FILE FTP FTPS GOPHER GOPHERS MQTT POP3 POP3S SMB SMBS TFTP; do
             echo "$protocol"
         done
         ;;
@@ -180,7 +180,7 @@ while test $# -gt 0; do
         ;;
 
     --configure)
-        echo " '--with-openssl' '--disable-shared' '--disable-libtool-lock' '--disable-debug' '--disable-warnings' '--enable-ares' '--enable-dependency-tracking' '--enable-http' '--disable-ftp' '--disable-ldap' '--enable-ldaps' '--disable-rtsp' '--enable-proxy' '--disable-dict' '--enable-tftp' '--disable-imap' '--disable-smtp' '--disable-libcurl-option' '--enable-ipv6' '--disable-openssl-auto-load-config' '--enable-versioned-symbols' '--disable-threaded-resolver' '--enable-verbose' '--enable-sspi' '--enable-crypto-auth' '--disable-ntlm-wb' '--enable-tls-srp' '--enable-unix-sockets' '--disable-cookies' '--enable-socketpair' '--disable-http-auth' '--disable-mime' '--disable-dateparse' '--disable-netrc' '--disable-progress-meter' '--enable-get-easy-options' '--disable-hsts' '--enable-code-coverage' '--enable-static' '--enable-fast-install'"
+        echo " '--with-openssl' '--disable-shared' '--disable-largefile' '--disable-silent-rules' '--disable-debug' '--enable-optimize' '--disable-warnings' '--disable-symbol-hiding' '--enable-maintainer-mode' '--enable-ares' '--disable-http' '--disable-ldap' '--disable-proxy' '--disable-dict' '--disable-telnet' '--enable-tftp' '--disable-imap' '--disable-smtp' '--enable-gopher' '--enable-mqtt' '--disable-manual' '--disable-ipv6' '--enable-openssl-auto-load-config' '--disable-versioned-symbols' '--enable-verbose' '--disable-sspi' '--enable-crypto-auth' '--disable-ntlm-wb' '--disable-tls-srp' '--enable-cookies' '--enable-socketpair' '--disable-http-auth' '--enable-doh' '--disable-mime' '--enable-dateparse' '--enable-netrc' '--disable-progress-meter' '--enable-dnsshuffle' '--enable-get-easy-options' '--disable-alt-svc' '--enable-hsts' '--enable-code-coverage' '--enable-static'"
         ;;
 
     *)
