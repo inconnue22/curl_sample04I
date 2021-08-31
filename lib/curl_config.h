@@ -26,7 +26,7 @@
 #define CURL_DISABLE_CRYPTO_AUTH 1
 
 /* to disable DICT */
-/* #undef CURL_DISABLE_DICT */
+#define CURL_DISABLE_DICT 1
 
 /* disable DoH */
 #define CURL_DISABLE_DOH 1
@@ -41,16 +41,16 @@
 /* #undef CURL_DISABLE_GETOPTIONS */
 
 /* to disable Gopher */
-/* #undef CURL_DISABLE_GOPHER */
+#define CURL_DISABLE_GOPHER 1
 
 /* disable alt-svc */
-/* #undef CURL_DISABLE_HSTS */
+#define CURL_DISABLE_HSTS 1
 
 /* to disable HTTP */
-/* #undef CURL_DISABLE_HTTP */
+#define CURL_DISABLE_HTTP 1
 
 /* disable HTTP authentication */
-/* #undef CURL_DISABLE_HTTP_AUTH */
+#define CURL_DISABLE_HTTP_AUTH 1
 
 /* to disable IMAP */
 #define CURL_DISABLE_IMAP 1
@@ -71,7 +71,7 @@
 /* #undef CURL_DISABLE_MQTT */
 
 /* disable netrc parsing */
-#define CURL_DISABLE_NETRC 1
+/* #undef CURL_DISABLE_NETRC */
 
 /* to disable NTLM support */
 /* #undef CURL_DISABLE_NTLM */
@@ -92,7 +92,7 @@
 /* #undef CURL_DISABLE_PROXY */
 
 /* to disable RTSP */
-/* #undef CURL_DISABLE_RTSP */
+#define CURL_DISABLE_RTSP 1
 
 /* disable DNS shuffling */
 /* #undef CURL_DISABLE_SHUFFLE_DNS */
@@ -530,7 +530,7 @@
 /* #undef HAVE_PROTO_BSDSOCKET_H */
 
 /* if you have <pthread.h> */
-#define HAVE_PTHREAD_H 1
+/* #undef HAVE_PTHREAD_H */
 
 /* Define to 1 if you have the <pwd.h> header file. */
 #define HAVE_PWD_H 1
@@ -935,7 +935,7 @@
 /* #undef USE_AMISSL */
 
 /* Define to enable c-ares support */
-/* #undef USE_ARES */
+#define USE_ARES 1
 
 /* if BearSSL is enabled */
 /* #undef USE_BEARSSL */
@@ -965,7 +965,7 @@
 /* #undef USE_LIBSSH2 */
 
 /* If you want to build curl with the built-in manual */
-#define USE_MANUAL 1
+/* #undef USE_MANUAL */
 
 /* if mbedTLS is enabled */
 /* #undef USE_MBEDTLS */
@@ -1010,13 +1010,13 @@
 /* #undef USE_SECTRANSP */
 
 /* if you want POSIX threaded DNS lookup */
-#define USE_THREADS_POSIX 1
+/* #undef USE_THREADS_POSIX */
 
 /* if you want Win32 threaded DNS lookup */
 /* #undef USE_THREADS_WIN32 */
 
 /* Use TLS-SRP authentication */
-/* #undef USE_TLS_SRP */
+#define USE_TLS_SRP 1
 
 /* Use Unix domain sockets */
 /* #undef USE_UNIX_SOCKETS */
