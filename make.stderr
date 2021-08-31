@@ -1,1 +1,3 @@
-Warning: compression requested but Gzip is not available
+curl_sasl.c:247:17: warning: ‘get_server_message’ defined but not used [-Wunused-function]
+  247 | static CURLcode get_server_message(struct SASL *sasl, struct Curl_easy *data,
+      |                 ^~~~~~~~~~~~~~~~~~
