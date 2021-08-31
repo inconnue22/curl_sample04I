@@ -20,13 +20,13 @@
 /* #undef CURL_DISABLE_ALTSVC */
 
 /* to disable cookies support */
-/* #undef CURL_DISABLE_COOKIES */
+#define CURL_DISABLE_COOKIES 1
 
 /* to disable cryptographic authentication */
 /* #undef CURL_DISABLE_CRYPTO_AUTH */
 
 /* to disable DICT */
-/* #undef CURL_DISABLE_DICT */
+#define CURL_DISABLE_DICT 1
 
 /* disable DoH */
 /* #undef CURL_DISABLE_DOH */
@@ -35,7 +35,7 @@
 /* #undef CURL_DISABLE_FILE */
 
 /* to disable FTP */
-/* #undef CURL_DISABLE_FTP */
+#define CURL_DISABLE_FTP 1
 
 /* to disable curl_easy_options */
 /* #undef CURL_DISABLE_GETOPTIONS */
@@ -50,10 +50,10 @@
 /* #undef CURL_DISABLE_HTTP */
 
 /* disable HTTP authentication */
-/* #undef CURL_DISABLE_HTTP_AUTH */
+#define CURL_DISABLE_HTTP_AUTH 1
 
 /* to disable IMAP */
-/* #undef CURL_DISABLE_IMAP */
+#define CURL_DISABLE_IMAP 1
 
 /* to disable LDAP */
 #define CURL_DISABLE_LDAP 1
@@ -62,16 +62,16 @@
 #define CURL_DISABLE_LDAPS 1
 
 /* to disable --libcurl C code generation option */
-/* #undef CURL_DISABLE_LIBCURL_OPTION */
+#define CURL_DISABLE_LIBCURL_OPTION 1
 
 /* disable mime API */
-/* #undef CURL_DISABLE_MIME */
+#define CURL_DISABLE_MIME 1
 
 /* to disable MQTT */
 /* #undef CURL_DISABLE_MQTT */
 
 /* disable netrc parsing */
-/* #undef CURL_DISABLE_NETRC */
+#define CURL_DISABLE_NETRC 1
 
 /* to disable NTLM support */
 /* #undef CURL_DISABLE_NTLM */
@@ -83,7 +83,7 @@
 #define CURL_DISABLE_PARSEDATE 1
 
 /* to disable POP3 */
-#define CURL_DISABLE_POP3 1
+/* #undef CURL_DISABLE_POP3 */
 
 /* disable progress-meter */
 #define CURL_DISABLE_PROGRESS_METER 1
@@ -92,13 +92,13 @@
 /* #undef CURL_DISABLE_PROXY */
 
 /* to disable RTSP */
-/* #undef CURL_DISABLE_RTSP */
+#define CURL_DISABLE_RTSP 1
 
 /* disable DNS shuffling */
 /* #undef CURL_DISABLE_SHUFFLE_DNS */
 
 /* to disable SMB/CIFS */
-#define CURL_DISABLE_SMB 1
+/* #undef CURL_DISABLE_SMB */
 
 /* to disable SMTP */
 #define CURL_DISABLE_SMTP 1
@@ -821,10 +821,10 @@
 /* #undef NEED_THREAD_SAFE */
 
 /* Define to enable NTLM delegation to winbind's ntlm_auth helper. */
-#define NTLM_WB_ENABLED 1
+/* #undef NTLM_WB_ENABLED */
 
 /* Define absolute filename for winbind's ntlm_auth helper. */
-#define NTLM_WB_FILE "/usr/bin/ntlm_auth"
+/* #undef NTLM_WB_FILE */
 
 /* cpu-machine-OS */
 #define OS "x86_64-pc-linux-gnu"
@@ -965,7 +965,7 @@
 /* #undef USE_LIBSSH2 */
 
 /* If you want to build curl with the built-in manual */
-/* #undef USE_MANUAL */
+#define USE_MANUAL 1
 
 /* if mbedTLS is enabled */
 /* #undef USE_MBEDTLS */
