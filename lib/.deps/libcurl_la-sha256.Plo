@@ -58,13 +58,7 @@ libcurl_la-sha256.lo: sha256.c /usr/include/stdc-predef.h curl_setup.h \
  /usr/include/unistd.h /usr/include/bits/posix_opt.h \
  /usr/include/bits/environments.h /usr/include/bits/confname.h \
  /usr/include/bits/getopt_posix.h /usr/include/bits/getopt_core.h \
- /usr/include/bits/unistd_ext.h curl_ctype.h warnless.h curl_sha256.h \
- curl_hmac.h /usr/include/openssl/opensslv.h /usr/include/openssl/sha.h \
- /usr/include/openssl/e_os2.h /usr/include/openssl/opensslconf.h \
- /usr/include/openssl/opensslconf-x86_64.h /usr/include/inttypes.h \
- /usr/lib/gcc/x86_64-redhat-linux/10/include/stdint.h \
- /usr/include/stdint.h /usr/include/bits/wchar.h \
- /usr/include/bits/stdint-uintn.h
+ /usr/include/bits/unistd_ext.h curl_ctype.h
 /usr/include/stdc-predef.h:
 curl_setup.h:
 curl_config.h:
@@ -180,16 +174,3 @@ curl_setup_once.h:
 /usr/include/bits/getopt_core.h:
 /usr/include/bits/unistd_ext.h:
 curl_ctype.h:
-warnless.h:
-curl_sha256.h:
-curl_hmac.h:
-/usr/include/openssl/opensslv.h:
-/usr/include/openssl/sha.h:
-/usr/include/openssl/e_os2.h:
-/usr/include/openssl/opensslconf.h:
-/usr/include/openssl/opensslconf-x86_64.h:
-/usr/include/inttypes.h:
-/usr/lib/gcc/x86_64-redhat-linux/10/include/stdint.h:
-/usr/include/stdint.h:
-/usr/include/bits/wchar.h:
-/usr/include/bits/stdint-uintn.h:
