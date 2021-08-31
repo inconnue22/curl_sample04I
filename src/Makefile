@@ -221,7 +221,7 @@ am__objects_2 = ../lib/libcurltool_la-strtoofft.lo \
 am__objects_3 =
 am__objects_4 = $(am__objects_1) $(am__objects_2) $(am__objects_3)
 am__objects_5 = $(am__objects_4)
-#am_libcurltool_la_OBJECTS = $(am__objects_5)
+am_libcurltool_la_OBJECTS = $(am__objects_5)
 libcurltool_la_OBJECTS = $(am_libcurltool_la_OBJECTS)
 AM_V_lt = $(am__v_lt_$(V))
 am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
@@ -231,7 +231,7 @@ libcurltool_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CCLD) \
 	$(libcurltool_la_CFLAGS) $(CFLAGS) $(libcurltool_la_LDFLAGS) \
 	$(LDFLAGS) -o $@
-#am_libcurltool_la_rpath =
+am_libcurltool_la_rpath =
 am__objects_6 = slist_wc.$(OBJEXT) tool_binmode.$(OBJEXT) \
 	tool_bname.$(OBJEXT) tool_cb_dbg.$(OBJEXT) \
 	tool_cb_hdr.$(OBJEXT) tool_cb_prg.$(OBJEXT) \
@@ -453,9 +453,9 @@ CC = gcc
 CCDEPMODE = depmode=gcc3
 
 # This might hold -Werror
-CFLAGS = -g -fprofile-arcs -ftest-coverage -Werror-implicit-function-declaration -O2 -Wno-system-headers -Wenum-conversion 
+CFLAGS = -O0 -g -fprofile-arcs -ftest-coverage -Werror-implicit-function-declaration -g -Wno-system-headers -Wenum-conversion 
 CFLAG_CURL_SYMBOL_HIDING = -fvisibility=hidden
-CONFIGURE_OPTIONS = " '--with-openssl' '--disable-shared' '--disable-silent-rules' '--disable-debug' '--enable-optimize' '--disable-warnings' '--enable-curldebug' '--enable-ares' '--disable-http' '--disable-ftp' '--enable-file' '--enable-ldap' '--enable-ldaps' '--enable-proxy' '--enable-dict' '--enable-tftp' '--disable-pop3' '--enable-imap' '--disable-smb' '--disable-smtp' '--disable-mqtt' '--disable-manual' '--enable-libcurl-option' '--disable-ipv6' '--enable-openssl-auto-load-config' '--enable-versioned-symbols' '--disable-threaded-resolver' '--enable-verbose' '--disable-crypto-auth' '--disable-ntlm-wb' '--enable-tls-srp' '--enable-unix-sockets' '--enable-cookies' '--enable-socketpair' '--disable-mime' '--enable-netrc' '--disable-progress-meter' '--enable-dnsshuffle' '--disable-get-easy-options' '--disable-alt-svc' '--enable-hsts' '--enable-hidden-symbols' '--enable-code-coverage' '--enable-libgcc'"
+CONFIGURE_OPTIONS = " '--with-openssl' '--disable-shared' '--disable-largefile' '--disable-silent-rules' '--enable-debug' '--disable-warnings' '--enable-curldebug' '--enable-symbol-hiding' '--disable-hidden-symbols' '--enable-ares' '--enable-file' '--enable-ldaps' '--disable-proxy' '--enable-dict' '--enable-telnet' '--disable-tftp' '--disable-pop3' '--enable-imap' '--enable-smb' '--disable-smtp' '--enable-gopher' '--disable-manual' '--disable-libcurl-option' '--disable-ipv6' '--enable-versioned-symbols' '--enable-pthreads' '--enable-verbose' '--enable-sspi' '--disable-crypto-auth' '--disable-ntlm-wb' '--disable-tls-srp' '--disable-unix-sockets' '--enable-socketpair' '--enable-http-auth' '--disable-doh' '--disable-mime' '--enable-dateparse' '--disable-progress-meter' '--disable-dnsshuffle' '--disable-alt-svc' '--enable-hsts' '--enable-hidden-symbols' '--enable-code-coverage' '--enable-fast-install' '--enable-libgcc'"
 CPP = gcc -E
 CPPFLAGS = -DNDEBUG
 CPPFLAG_CURL_STATICLIB = -DCURL_STATICLIB
@@ -464,20 +464,20 @@ CURL_CA_BUNDLE = "/etc/pki/tls/certs/ca-bundle.crt"
 CURL_CFLAG_EXTRAS = 
 CURL_DISABLE_DICT = 
 CURL_DISABLE_FILE = 
-CURL_DISABLE_FTP = 1
+CURL_DISABLE_FTP = 
 CURL_DISABLE_GOPHER = 
-CURL_DISABLE_HTTP = 1
+CURL_DISABLE_HTTP = 
 CURL_DISABLE_IMAP = 
 CURL_DISABLE_LDAP = 
 CURL_DISABLE_LDAPS = 
-CURL_DISABLE_MQTT = 1
+CURL_DISABLE_MQTT = 
 CURL_DISABLE_POP3 = 1
-CURL_DISABLE_PROXY = 
-CURL_DISABLE_RTSP = 1
-CURL_DISABLE_SMB = 1
+CURL_DISABLE_PROXY = 1
+CURL_DISABLE_RTSP = 
+CURL_DISABLE_SMB = 
 CURL_DISABLE_SMTP = 1
 CURL_DISABLE_TELNET = 
-CURL_DISABLE_TFTP = 
+CURL_DISABLE_TFTP = 1
 CURL_LT_SHLIB_VERSIONED_FLAVOUR = OPENSSL_
 CURL_NETWORK_AND_TIME_LIBS = -lgcc -lgcov
 CURL_NETWORK_LIBS = -lgcc -lgcov
@@ -566,8 +566,8 @@ SSL_BACKENDS = OpenSSL
 SSL_ENABLED = 1
 SSL_LIBS = -lssl -lcrypto 
 STRIP = strip
-SUPPORT_FEATURES = AsynchDNS HTTPS-proxy Largefile SSL TLS-SRP UnixSockets libz zstd
-SUPPORT_PROTOCOLS = DICT FILE GOPHER GOPHERS IMAP IMAPS LDAP LDAPS TELNET TFTP
+SUPPORT_FEATURES = AsynchDNS HSTS Largefile SSL libz zstd
+SUPPORT_PROTOCOLS = DICT FILE FTP FTPS GOPHER GOPHERS HTTP HTTPS IMAP IMAPS LDAP LDAPS MQTT RTSP TELNET
 USE_ARES = 1
 USE_BEARSSL = 
 USE_GNUTLS = 
@@ -588,7 +588,7 @@ USE_QUICHE =
 USE_RUSTLS = 
 USE_SCHANNEL = 
 USE_SECTRANSP = 
-USE_UNIX_SOCKETS = 1
+USE_UNIX_SOCKETS = 
 USE_WIN32_CRYPTO = 
 USE_WIN32_LARGE_FILES = 
 USE_WIN32_SMALL_FILES = 
@@ -811,13 +811,13 @@ curl_SOURCES = $(CURL_FILES)
 curl_LDADD = $(top_builddir)/lib/libcurl.la -lcares -lssl -lcrypto -lssl -lcrypto -lldap -llber -lzstd -lz -lgcc -lgcov
 
 # if unit tests are enabled, build a static library to link them with
-#noinst_LTLIBRARIES = libcurltool.la
-#libcurltool_la_CPPFLAGS = $(AM_CPPFLAGS) \
-#                          -DCURL_STATICLIB -DUNITTESTS
+noinst_LTLIBRARIES = libcurltool.la
+libcurltool_la_CPPFLAGS = $(AM_CPPFLAGS) \
+                          -DCURL_STATICLIB -DUNITTESTS
 
-#libcurltool_la_CFLAGS = 
-#libcurltool_la_LDFLAGS = -static $(LINKFLAGS)
-#libcurltool_la_SOURCES = $(curl_SOURCES)
+libcurltool_la_CFLAGS = 
+libcurltool_la_LDFLAGS = -static $(LINKFLAGS)
+libcurltool_la_SOURCES = $(curl_SOURCES)
 CLEANFILES = tool_hugehelp.c
 EXTRA_DIST = mkhelp.pl makefile.dj                                     \
  Makefile.m32 macos/curl.mcp.xml.sit.hqx macos/MACINSTALL.TXT          \
