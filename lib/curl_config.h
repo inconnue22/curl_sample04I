@@ -17,25 +17,25 @@
 /* #undef CURL_DEFAULT_SSL_BACKEND */
 
 /* disable alt-svc */
-#define CURL_DISABLE_ALTSVC 1
+/* #undef CURL_DISABLE_ALTSVC */
 
 /* to disable cookies support */
-/* #undef CURL_DISABLE_COOKIES */
+#define CURL_DISABLE_COOKIES 1
 
 /* to disable cryptographic authentication */
-#define CURL_DISABLE_CRYPTO_AUTH 1
+/* #undef CURL_DISABLE_CRYPTO_AUTH */
 
 /* to disable DICT */
 /* #undef CURL_DISABLE_DICT */
 
 /* disable DoH */
-#define CURL_DISABLE_DOH 1
+/* #undef CURL_DISABLE_DOH */
 
 /* to disable FILE */
 /* #undef CURL_DISABLE_FILE */
 
 /* to disable FTP */
-/* #undef CURL_DISABLE_FTP */
+#define CURL_DISABLE_FTP 1
 
 /* to disable curl_easy_options */
 /* #undef CURL_DISABLE_GETOPTIONS */
@@ -50,7 +50,7 @@
 /* #undef CURL_DISABLE_HTTP */
 
 /* disable HTTP authentication */
-/* #undef CURL_DISABLE_HTTP_AUTH */
+#define CURL_DISABLE_HTTP_AUTH 1
 
 /* to disable IMAP */
 /* #undef CURL_DISABLE_IMAP */
@@ -65,22 +65,22 @@
 #define CURL_DISABLE_LIBCURL_OPTION 1
 
 /* disable mime API */
-#define CURL_DISABLE_MIME 1
+/* #undef CURL_DISABLE_MIME */
 
 /* to disable MQTT */
-/* #undef CURL_DISABLE_MQTT */
+#define CURL_DISABLE_MQTT 1
 
 /* disable netrc parsing */
-/* #undef CURL_DISABLE_NETRC */
+#define CURL_DISABLE_NETRC 1
 
 /* to disable NTLM support */
 /* #undef CURL_DISABLE_NTLM */
 
 /* if the OpenSSL configuration won't be loaded automatically */
-#define CURL_DISABLE_OPENSSL_AUTO_LOAD_CONFIG 1
+/* #undef CURL_DISABLE_OPENSSL_AUTO_LOAD_CONFIG */
 
 /* disable date parsing */
-/* #undef CURL_DISABLE_PARSEDATE */
+#define CURL_DISABLE_PARSEDATE 1
 
 /* to disable POP3 */
 #define CURL_DISABLE_POP3 1
@@ -92,13 +92,13 @@
 /* #undef CURL_DISABLE_PROXY */
 
 /* to disable RTSP */
-/* #undef CURL_DISABLE_RTSP */
+#define CURL_DISABLE_RTSP 1
 
 /* disable DNS shuffling */
 /* #undef CURL_DISABLE_SHUFFLE_DNS */
 
 /* to disable SMB/CIFS */
-#define CURL_DISABLE_SMB 1
+/* #undef CURL_DISABLE_SMB */
 
 /* to disable SMTP */
 /* #undef CURL_DISABLE_SMTP */
@@ -125,7 +125,7 @@
 /* #undef CURL_WITH_MULTI_SSL */
 
 /* enable debug build options */
-/* #undef DEBUGBUILD */
+#define DEBUGBUILD 1
 
 /* your Entropy Gathering Daemon socket pathname */
 /* #undef EGD_SOCKET */
@@ -935,7 +935,7 @@
 /* #undef USE_AMISSL */
 
 /* Define to enable c-ares support */
-#define USE_ARES 1
+/* #undef USE_ARES */
 
 /* if BearSSL is enabled */
 /* #undef USE_BEARSSL */
@@ -1016,7 +1016,7 @@
 /* #undef USE_THREADS_WIN32 */
 
 /* Use TLS-SRP authentication */
-/* #undef USE_TLS_SRP */
+#define USE_TLS_SRP 1
 
 /* Use Unix domain sockets */
 #define USE_UNIX_SOCKETS 1
