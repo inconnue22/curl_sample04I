@@ -336,7 +336,7 @@ am__distuninstallcheck_listfiles = $(distuninstallcheck_listfiles) \
 distcleancheck_listfiles = find . -type f -print
 ACLOCAL = ${SHELL} /github/curl/missing aclocal-1.16
 AMTAR = $${TAR-tar}
-AM_DEFAULT_VERBOSITY = 0
+AM_DEFAULT_VERBOSITY = 1
 AR = /usr/bin/ar
 AR_FLAGS = cr
 AS = as
@@ -347,9 +347,9 @@ AWK = gawk
 BLANK_AT_MAKETIME = 
 CC = gcc
 CCDEPMODE = depmode=gcc3
-CFLAGS = -Werror-implicit-function-declaration -O2 -Wno-system-headers -Wenum-conversion
+CFLAGS = -Werror-implicit-function-declaration -g -O2 -pedantic -Wall -W -Wpointer-arith -Wwrite-strings -Wunused -Wshadow -Winline -Wnested-externs -Wmissing-declarations -Wmissing-prototypes -Wno-long-long -Wbad-function-cast -Wfloat-equal -Wno-multichar -Wsign-compare -Wundef -Wno-format-nonliteral -Wendif-labels -Wstrict-prototypes -Wdeclaration-after-statement -Wold-style-definition -Wstrict-aliasing=3 -Wcast-align -Wtype-limits -Wold-style-declaration -Wmissing-parameter-type -Wempty-body -Wclobbered -Wignored-qualifiers -Wconversion -Wno-sign-conversion -Wvla -ftree-vrp -Wdouble-promotion -Wformat=2 -Warray-bounds=2 -Wshift-negative-value -Wshift-overflow=2 -Wnull-dereference -fdelete-null-pointer-checks -Wduplicated-cond -Wunused-const-variable -Wduplicated-branches -Wrestrict -Walloc-zero -Wformat-overflow=2 -Wformat-truncation=2 -Wimplicit-fallthrough=4 -Wno-system-headers -Wenum-conversion -pthread
 CFLAG_CURL_SYMBOL_HIDING = -fvisibility=hidden
-CONFIGURE_OPTIONS = " '--with-openssl' '--disable-shared' '--disable-largefile' '--enable-silent-rules' '--disable-debug' '--enable-optimize' '--disable-warnings' '--disable-curldebug' '--disable-hidden-symbols' '--enable-ares' '--enable-dependency-tracking' '--enable-http' '--enable-ftp' '--enable-file' '--enable-ldap' '--disable-ldaps' '--enable-proxy' '--enable-dict' '--disable-telnet' '--enable-tftp' '--disable-pop3' '--disable-smb' '--enable-smtp' '--enable-gopher' '--enable-mqtt' '--disable-libcurl-option' '--disable-ipv6' '--disable-openssl-auto-load-config' '--disable-versioned-symbols' '--enable-pthreads' '--enable-verbose' '--enable-sspi' '--disable-crypto-auth' '--disable-ntlm-wb' '--disable-tls-srp' '--enable-cookies' '--enable-http-auth' '--disable-doh' '--disable-mime' '--enable-netrc' '--disable-progress-meter' '--enable-get-easy-options' '--disable-alt-svc' '--enable-hsts' '--enable-hidden-symbols' '--enable-fast-install'"
+CONFIGURE_OPTIONS = " '--with-openssl' '--disable-shared' '--disable-largefile' '--disable-libtool-lock' '--disable-silent-rules' '--enable-debug' '--enable-optimize' '--enable-curldebug' '--disable-symbol-hiding' '--enable-maintainer-mode' '--disable-ares' '--enable-http' '--enable-ftp' '--disable-file' '--enable-ldap' '--disable-rtsp' '--enable-proxy' '--enable-telnet' '--disable-tftp' '--disable-imap' '--disable-smb' '--enable-smtp' '--disable-gopher' '--enable-mqtt' '--disable-manual' '--enable-openssl-auto-load-config' '--disable-versioned-symbols' '--enable-verbose' '--enable-crypto-auth' '--disable-ntlm-wb' '--enable-tls-srp' '--disable-http-auth' '--enable-doh' '--enable-mime' '--enable-netrc' '--enable-progress-meter' '--disable-dnsshuffle' '--enable-hsts' '--enable-hidden-symbols' '--enable-static' '--enable-fast-install'"
 CPP = gcc -E
 CPPFLAGS = 
 CPPFLAG_CURL_STATICLIB = -DCURL_STATICLIB
@@ -357,21 +357,21 @@ CURLVERSION = 7.78.0-DEV
 CURL_CA_BUNDLE = "/etc/pki/tls/certs/ca-bundle.crt"
 CURL_CFLAG_EXTRAS = 
 CURL_DISABLE_DICT = 
-CURL_DISABLE_FILE = 
+CURL_DISABLE_FILE = 1
 CURL_DISABLE_FTP = 
-CURL_DISABLE_GOPHER = 
+CURL_DISABLE_GOPHER = 1
 CURL_DISABLE_HTTP = 
-CURL_DISABLE_IMAP = 
+CURL_DISABLE_IMAP = 1
 CURL_DISABLE_LDAP = 
-CURL_DISABLE_LDAPS = 1
+CURL_DISABLE_LDAPS = 
 CURL_DISABLE_MQTT = 
-CURL_DISABLE_POP3 = 1
+CURL_DISABLE_POP3 = 
 CURL_DISABLE_PROXY = 
-CURL_DISABLE_RTSP = 
+CURL_DISABLE_RTSP = 1
 CURL_DISABLE_SMB = 1
 CURL_DISABLE_SMTP = 
-CURL_DISABLE_TELNET = 1
-CURL_DISABLE_TFTP = 
+CURL_DISABLE_TELNET = 
+CURL_DISABLE_TFTP = 1
 CURL_LT_SHLIB_VERSIONED_FLAVOUR = 
 CURL_NETWORK_AND_TIME_LIBS = 
 CURL_NETWORK_LIBS = 
@@ -396,7 +396,7 @@ GCOV =
 GREP = /usr/bin/grep
 HAVE_BROTLI = 
 HAVE_GNUTLS_SRP = 
-HAVE_LDAP_SSL = 
+HAVE_LDAP_SSL = 1
 HAVE_LIBZ = 1
 HAVE_OPENSSL_SRP = 1
 HAVE_PROTO_BSDSOCKET_H = 
@@ -407,20 +407,20 @@ INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
-IPV6_ENABLED = 
+IPV6_ENABLED = 1
 LCOV = 
 LD = /usr/bin/ld -m elf_x86_64
-LDFLAGS = -L/usr/usr/lib64
-LIBCURL_LIBS = -lcares -lssl -lcrypto -lssl -lcrypto -lldap -llber -lzstd -lz
-LIBCURL_NO_SHARED = -lcares  -lssl -lcrypto -lssl -lcrypto  -lldap -llber -lzstd  -lz 
+LDFLAGS = 
+LIBCURL_LIBS = -lssl -lcrypto -lssl -lcrypto -lldap -llber -lzstd -lz -pthread
+LIBCURL_NO_SHARED = -lssl -lcrypto -lssl -lcrypto  -lldap -llber -lzstd  -lz  -pthread
 LIBOBJS = 
-LIBS = -lcares -lssl -lcrypto -lssl -lcrypto -lldap -llber -lzstd -lz
+LIBS = -lssl -lcrypto -lssl -lcrypto -lldap -llber -lzstd -lz
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
 LIPO = 
 LN_S = ln -s
 LTLIBOBJS = 
 LT_SYS_LIBRARY_PATH = 
-MAINT = #
+MAINT = 
 MAKEINFO = ${SHELL} /github/curl/missing makeinfo
 MANIFEST_TOOL = :
 MANOPT = -man
@@ -456,9 +456,9 @@ SSL_BACKENDS = OpenSSL
 SSL_ENABLED = 1
 SSL_LIBS = -lssl -lcrypto 
 STRIP = strip
-SUPPORT_FEATURES = AsynchDNS HSTS HTTPS-proxy Largefile SSL UnixSockets libz zstd
-SUPPORT_PROTOCOLS = DICT FILE FTP FTPS GOPHER GOPHERS HTTP HTTPS IMAP IMAPS LDAP MQTT RTSP SMTP SMTPS TFTP
-USE_ARES = 1
+SUPPORT_FEATURES = AsynchDNS HSTS HTTPS-proxy IPv6 Largefile NTLM SSL TLS-SRP UnixSockets alt-svc libz zstd
+SUPPORT_PROTOCOLS = DICT FTP FTPS HTTP HTTPS LDAP LDAPS MQTT POP3 POP3S SMTP SMTPS TELNET
+USE_ARES = 
 USE_BEARSSL = 
 USE_GNUTLS = 
 USE_HYPER = 
@@ -1147,7 +1147,7 @@ all: all-recursive
 .SUFFIXES:
 am--refresh: Makefile
 	@:
-$(srcdir)/Makefile.in: # $(srcdir)/Makefile.am $(srcdir)/lib/Makefile.inc $(srcdir)/src/Makefile.inc $(am__configure_deps)
+$(srcdir)/Makefile.in:  $(srcdir)/Makefile.am $(srcdir)/lib/Makefile.inc $(srcdir)/src/Makefile.inc $(am__configure_deps)
 	@for dep in $?; do \
 	  case '$(am__configure_deps)' in \
 	    *$$dep*) \
@@ -1174,9 +1174,9 @@ $(srcdir)/lib/Makefile.inc $(srcdir)/src/Makefile.inc $(am__empty):
 $(top_builddir)/config.status: $(top_srcdir)/configure $(CONFIG_STATUS_DEPENDENCIES)
 	$(SHELL) ./config.status --recheck
 
-$(top_srcdir)/configure: # $(am__configure_deps)
+$(top_srcdir)/configure:  $(am__configure_deps)
 	$(am__cd) $(srcdir) && $(AUTOCONF)
-$(ACLOCAL_M4): # $(am__aclocal_m4_deps)
+$(ACLOCAL_M4):  $(am__aclocal_m4_deps)
 	$(am__cd) $(srcdir) && $(ACLOCAL) $(ACLOCAL_AMFLAGS)
 $(am__aclocal_m4_deps):
 curl-config: $(top_builddir)/config.status $(srcdir)/curl-config.in
