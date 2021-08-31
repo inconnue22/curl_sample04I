@@ -27,7 +27,7 @@ prefix=/usr/local
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include
-supported_protocols="DICT FTP FTPS HTTP HTTPS LDAP LDAPS MQTT POP3 POP3S SMTP SMTPS TELNET"
+supported_protocols="DICT FILE FTP FTPS GOPHER GOPHERS HTTP HTTPS LDAP LDAPS MQTT POP3 POP3S RTSP SMB SMBS TELNET TFTP"
 supported_features="AsynchDNS HSTS HTTPS-proxy IPv6 Largefile NTLM SSL TLS-SRP UnixSockets alt-svc libz zstd"
 
 Name: libcurl
