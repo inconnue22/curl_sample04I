@@ -59,22 +59,7 @@ vauth/libcurl_la-cleartext.lo: vauth/cleartext.c \
  /usr/include/unistd.h /usr/include/bits/posix_opt.h \
  /usr/include/bits/environments.h /usr/include/bits/confname.h \
  /usr/include/bits/getopt_posix.h /usr/include/bits/getopt_core.h \
- /usr/include/bits/unistd_ext.h ../lib/curl_ctype.h ../lib/curl_setup.h \
- ../lib/urldata.h ../lib/cookie.h ../lib/psl.h ../lib/formdata.h \
- /usr/include/netinet/in.h /usr/include/bits/stdint-uintn.h \
- /usr/include/bits/in.h ../lib/timeval.h ../lib/http_chunks.h \
- ../lib/hostip.h ../lib/hash.h ../lib/llist.h ../lib/curl_addrinfo.h \
- /usr/include/netdb.h /usr/include/rpc/netdb.h /usr/include/bits/netdb.h \
- /usr/include/arpa/inet.h ../lib/asyn.h /usr/include/setjmp.h \
- /usr/include/bits/setjmp.h ../lib/splay.h ../lib/dynbuf.h ../lib/mime.h \
- ../lib/imap.h ../lib/pingpong.h ../lib/curl_sasl.h ../lib/pop3.h \
- ../lib/smtp.h ../lib/ftp.h ../lib/file.h ../lib/vssh/ssh.h ../lib/http.h \
- ../lib/rtsp.h ../lib/smb.h ../lib/mqtt.h ../lib/wildcard.h \
- ../lib/multihandle.h ../lib/conncache.h ../lib/socketpair.h \
- ../lib/quic.h ../lib/c-hyper.h ../lib/vauth/vauth.h ../lib/bufref.h \
- ../lib/curl_md5.h ../lib/warnless.h ../lib/strtok.h ../lib/sendf.h \
- ../lib/curl_printf.h ../include/curl/mprintf.h ../lib/curl_memory.h \
- ../lib/memdebug.h
+ /usr/include/bits/unistd_ext.h ../lib/curl_ctype.h ../lib/curl_setup.h
 /usr/include/stdc-predef.h:
 ../lib/curl_setup.h:
 ../lib/curl_config.h:
@@ -191,54 +176,3 @@ vauth/libcurl_la-cleartext.lo: vauth/cleartext.c \
 /usr/include/bits/unistd_ext.h:
 ../lib/curl_ctype.h:
 ../lib/curl_setup.h:
-../lib/urldata.h:
-../lib/cookie.h:
-../lib/psl.h:
-../lib/formdata.h:
-/usr/include/netinet/in.h:
-/usr/include/bits/stdint-uintn.h:
-/usr/include/bits/in.h:
-../lib/timeval.h:
-../lib/http_chunks.h:
-../lib/hostip.h:
-../lib/hash.h:
-../lib/llist.h:
-../lib/curl_addrinfo.h:
-/usr/include/netdb.h:
-/usr/include/rpc/netdb.h:
-/usr/include/bits/netdb.h:
-/usr/include/arpa/inet.h:
-../lib/asyn.h:
-/usr/include/setjmp.h:
-/usr/include/bits/setjmp.h:
-../lib/splay.h:
-../lib/dynbuf.h:
-../lib/mime.h:
-../lib/imap.h:
-../lib/pingpong.h:
-../lib/curl_sasl.h:
-../lib/pop3.h:
-../lib/smtp.h:
-../lib/ftp.h:
-../lib/file.h:
-../lib/vssh/ssh.h:
-../lib/http.h:
-../lib/rtsp.h:
-../lib/smb.h:
-../lib/mqtt.h:
-../lib/wildcard.h:
-../lib/multihandle.h:
-../lib/conncache.h:
-../lib/socketpair.h:
-../lib/quic.h:
-../lib/c-hyper.h:
-../lib/vauth/vauth.h:
-../lib/bufref.h:
-../lib/curl_md5.h:
-../lib/warnless.h:
-../lib/strtok.h:
-../lib/sendf.h:
-../lib/curl_printf.h:
-../include/curl/mprintf.h:
-../lib/curl_memory.h:
-../lib/memdebug.h:
