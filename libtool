@@ -1,6 +1,6 @@
 #! /bin/sh
 # Generated automatically by config.status (curl) -
-# Libtool was configured on host e8e37756cdf4:
+# Libtool was configured on host 2a280e76de14:
 # NOTE: Changes made to this file will be lost: look at ltmain.sh.
 
 # Provide generalized library-building support services.
@@ -168,7 +168,7 @@ lock_old_archive_extraction=no
 LTCC="gcc"
 
 # LTCC compiler flags.
-LTCFLAGS="-g -fprofile-arcs -ftest-coverage -Werror-implicit-function-declaration -O2 -pedantic -Wall -W -Wpointer-arith -Wwrite-strings -Wunused -Wshadow -Winline -Wnested-externs -Wmissing-declarations -Wmissing-prototypes -Wno-long-long -Wbad-function-cast -Wfloat-equal -Wno-multichar -Wsign-compare -Wundef -Wno-format-nonliteral -Wendif-labels -Wstrict-prototypes -Wdeclaration-after-statement -Wold-style-definition -Wstrict-aliasing=3 -Wcast-align -Wtype-limits -Wold-style-declaration -Wmissing-parameter-type -Wempty-body -Wclobbered -Wignored-qualifiers -Wconversion -Wno-sign-conversion -Wvla -ftree-vrp -Wdouble-promotion -Wformat=2 -Warray-bounds=2 -Wshift-negative-value -Wshift-overflow=2 -Wnull-dereference -fdelete-null-pointer-checks -Wduplicated-cond -Wunused-const-variable -Wduplicated-branches -Wrestrict -Walloc-zero -Wformat-overflow=2 -Wformat-truncation=2 -Wimplicit-fallthrough=4 -Wno-system-headers -Wenum-conversion -pthread"
+LTCFLAGS="-Werror-implicit-function-declaration -g -O2 -pedantic -Wall -W -Wpointer-arith -Wwrite-strings -Wunused -Wshadow -Winline -Wnested-externs -Wmissing-declarations -Wmissing-prototypes -Wno-long-long -Wbad-function-cast -Wfloat-equal -Wno-multichar -Wsign-compare -Wundef -Wno-format-nonliteral -Wendif-labels -Wstrict-prototypes -Wdeclaration-after-statement -Wold-style-definition -Wstrict-aliasing=3 -Wcast-align -Wtype-limits -Wold-style-declaration -Wmissing-parameter-type -Wempty-body -Wclobbered -Wignored-qualifiers -Wconversion -Wno-sign-conversion -Wvla -ftree-vrp -Wdouble-promotion -Wformat=2 -Warray-bounds=2 -Wshift-negative-value -Wshift-overflow=2 -Wnull-dereference -fdelete-null-pointer-checks -Wduplicated-cond -Wunused-const-variable -Wduplicated-branches -Wrestrict -Walloc-zero -Wformat-overflow=2 -Wformat-truncation=2 -Wimplicit-fallthrough=4 -Wno-system-headers -Wenum-conversion -pthread"
 
 # Take the output of nm and produce a listing of raw symbols and C names.
 global_symbol_pipe="sed -n -e 's/^.*[	 ]\\([ABCDGIRSTW][ABCDGIRSTW]*\\)[	 ][	 ]*\\([_A-Za-z][_A-Za-z0-9]*\\)\$/\\1 \\2 \\2/p' | sed '/ __gnu_lto/d'"
