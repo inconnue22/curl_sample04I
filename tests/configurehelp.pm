@@ -18,6 +18,6 @@ use vars qw(
     $Cpreprocessor
     );
 
-$Cpreprocessor = 'gcc -E';
+$Cpreprocessor = 'gcc -E -DNDEBUG';
 
 1;
