@@ -17,7 +17,7 @@
 /* #undef CURL_DEFAULT_SSL_BACKEND */
 
 /* disable alt-svc */
-#define CURL_DISABLE_ALTSVC 1
+/* #undef CURL_DISABLE_ALTSVC */
 
 /* to disable cookies support */
 #define CURL_DISABLE_COOKIES 1
@@ -26,34 +26,34 @@
 #define CURL_DISABLE_CRYPTO_AUTH 1
 
 /* to disable DICT */
-#define CURL_DISABLE_DICT 1
+/* #undef CURL_DISABLE_DICT */
 
 /* disable DoH */
 #define CURL_DISABLE_DOH 1
 
 /* to disable FILE */
-/* #undef CURL_DISABLE_FILE */
+#define CURL_DISABLE_FILE 1
 
 /* to disable FTP */
 /* #undef CURL_DISABLE_FTP */
 
 /* to disable curl_easy_options */
-/* #undef CURL_DISABLE_GETOPTIONS */
+#define CURL_DISABLE_GETOPTIONS 1
 
 /* to disable Gopher */
 #define CURL_DISABLE_GOPHER 1
 
 /* disable alt-svc */
-#define CURL_DISABLE_HSTS 1
+/* #undef CURL_DISABLE_HSTS */
 
 /* to disable HTTP */
-#define CURL_DISABLE_HTTP 1
+/* #undef CURL_DISABLE_HTTP */
 
 /* disable HTTP authentication */
-#define CURL_DISABLE_HTTP_AUTH 1
+/* #undef CURL_DISABLE_HTTP_AUTH */
 
 /* to disable IMAP */
-#define CURL_DISABLE_IMAP 1
+/* #undef CURL_DISABLE_IMAP */
 
 /* to disable LDAP */
 /* #undef CURL_DISABLE_LDAP */
@@ -65,7 +65,7 @@
 /* #undef CURL_DISABLE_LIBCURL_OPTION */
 
 /* disable mime API */
-/* #undef CURL_DISABLE_MIME */
+#define CURL_DISABLE_MIME 1
 
 /* to disable MQTT */
 /* #undef CURL_DISABLE_MQTT */
@@ -77,46 +77,46 @@
 /* #undef CURL_DISABLE_NTLM */
 
 /* if the OpenSSL configuration won't be loaded automatically */
-/* #undef CURL_DISABLE_OPENSSL_AUTO_LOAD_CONFIG */
+#define CURL_DISABLE_OPENSSL_AUTO_LOAD_CONFIG 1
 
 /* disable date parsing */
-/* #undef CURL_DISABLE_PARSEDATE */
+#define CURL_DISABLE_PARSEDATE 1
 
 /* to disable POP3 */
-#define CURL_DISABLE_POP3 1
+/* #undef CURL_DISABLE_POP3 */
 
 /* disable progress-meter */
-/* #undef CURL_DISABLE_PROGRESS_METER */
+#define CURL_DISABLE_PROGRESS_METER 1
 
 /* to disable proxies */
 /* #undef CURL_DISABLE_PROXY */
 
 /* to disable RTSP */
-#define CURL_DISABLE_RTSP 1
+/* #undef CURL_DISABLE_RTSP */
 
 /* disable DNS shuffling */
 /* #undef CURL_DISABLE_SHUFFLE_DNS */
 
 /* to disable SMB/CIFS */
-#define CURL_DISABLE_SMB 1
+/* #undef CURL_DISABLE_SMB */
 
 /* to disable SMTP */
-#define CURL_DISABLE_SMTP 1
+/* #undef CURL_DISABLE_SMTP */
 
 /* to disable socketpair support */
-/* #undef CURL_DISABLE_SOCKETPAIR */
+#define CURL_DISABLE_SOCKETPAIR 1
 
 /* to disable TELNET */
-/* #undef CURL_DISABLE_TELNET */
+#define CURL_DISABLE_TELNET 1
 
 /* to disable TFTP */
-#define CURL_DISABLE_TFTP 1
+/* #undef CURL_DISABLE_TFTP */
 
 /* to disable verbose strings */
-/* #undef CURL_DISABLE_VERBOSE_STRINGS */
+#define CURL_DISABLE_VERBOSE_STRINGS 1
 
 /* Definition to make a library symbol externally visible. */
-#define CURL_EXTERN_SYMBOL __attribute__ ((__visibility__ ("default")))
+/* #undef CURL_EXTERN_SYMBOL */
 
 /* IP address type in sockaddr */
 #define CURL_SA_FAMILY_T sa_family_t
@@ -125,7 +125,7 @@
 /* #undef CURL_WITH_MULTI_SSL */
 
 /* enable debug build options */
-/* #undef DEBUGBUILD */
+#define DEBUGBUILD 1
 
 /* your Entropy Gathering Daemon socket pathname */
 /* #undef EGD_SOCKET */
@@ -965,7 +965,7 @@
 /* #undef USE_LIBSSH2 */
 
 /* If you want to build curl with the built-in manual */
-/* #undef USE_MANUAL */
+#define USE_MANUAL 1
 
 /* if mbedTLS is enabled */
 /* #undef USE_MBEDTLS */
