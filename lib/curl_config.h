@@ -2,7 +2,7 @@
 /* lib/curl_config.h.in.  Generated from configure.ac by autoheader.  */
 
 /* to enable curl debug memory tracking */
-/* #undef CURLDEBUG */
+#define CURLDEBUG 1
 
 /* Location of default ca bundle */
 #define CURL_CA_BUNDLE "/etc/pki/tls/certs/ca-bundle.crt"
@@ -17,61 +17,61 @@
 /* #undef CURL_DEFAULT_SSL_BACKEND */
 
 /* disable alt-svc */
-/* #undef CURL_DISABLE_ALTSVC */
+#define CURL_DISABLE_ALTSVC 1
 
 /* to disable cookies support */
 #define CURL_DISABLE_COOKIES 1
 
 /* to disable cryptographic authentication */
-/* #undef CURL_DISABLE_CRYPTO_AUTH */
+#define CURL_DISABLE_CRYPTO_AUTH 1
 
 /* to disable DICT */
-/* #undef CURL_DISABLE_DICT */
+#define CURL_DISABLE_DICT 1
 
 /* disable DoH */
-/* #undef CURL_DISABLE_DOH */
+#define CURL_DISABLE_DOH 1
 
 /* to disable FILE */
 /* #undef CURL_DISABLE_FILE */
 
 /* to disable FTP */
-#define CURL_DISABLE_FTP 1
+/* #undef CURL_DISABLE_FTP */
 
 /* to disable curl_easy_options */
 /* #undef CURL_DISABLE_GETOPTIONS */
 
 /* to disable Gopher */
-/* #undef CURL_DISABLE_GOPHER */
+#define CURL_DISABLE_GOPHER 1
 
 /* disable alt-svc */
-/* #undef CURL_DISABLE_HSTS */
+#define CURL_DISABLE_HSTS 1
 
 /* to disable HTTP */
-/* #undef CURL_DISABLE_HTTP */
+#define CURL_DISABLE_HTTP 1
 
 /* disable HTTP authentication */
 #define CURL_DISABLE_HTTP_AUTH 1
 
 /* to disable IMAP */
-/* #undef CURL_DISABLE_IMAP */
+#define CURL_DISABLE_IMAP 1
 
 /* to disable LDAP */
 /* #undef CURL_DISABLE_LDAP */
 
 /* to disable LDAPS */
-#define CURL_DISABLE_LDAPS 1
+/* #undef CURL_DISABLE_LDAPS */
 
 /* to disable --libcurl C code generation option */
-#define CURL_DISABLE_LIBCURL_OPTION 1
+/* #undef CURL_DISABLE_LIBCURL_OPTION */
 
 /* disable mime API */
 /* #undef CURL_DISABLE_MIME */
 
 /* to disable MQTT */
-#define CURL_DISABLE_MQTT 1
+/* #undef CURL_DISABLE_MQTT */
 
 /* disable netrc parsing */
-#define CURL_DISABLE_NETRC 1
+/* #undef CURL_DISABLE_NETRC */
 
 /* to disable NTLM support */
 /* #undef CURL_DISABLE_NTLM */
@@ -80,13 +80,13 @@
 /* #undef CURL_DISABLE_OPENSSL_AUTO_LOAD_CONFIG */
 
 /* disable date parsing */
-#define CURL_DISABLE_PARSEDATE 1
+/* #undef CURL_DISABLE_PARSEDATE */
 
 /* to disable POP3 */
 #define CURL_DISABLE_POP3 1
 
 /* disable progress-meter */
-#define CURL_DISABLE_PROGRESS_METER 1
+/* #undef CURL_DISABLE_PROGRESS_METER */
 
 /* to disable proxies */
 /* #undef CURL_DISABLE_PROXY */
@@ -98,19 +98,19 @@
 /* #undef CURL_DISABLE_SHUFFLE_DNS */
 
 /* to disable SMB/CIFS */
-/* #undef CURL_DISABLE_SMB */
+#define CURL_DISABLE_SMB 1
 
 /* to disable SMTP */
-/* #undef CURL_DISABLE_SMTP */
+#define CURL_DISABLE_SMTP 1
 
 /* to disable socketpair support */
 /* #undef CURL_DISABLE_SOCKETPAIR */
 
 /* to disable TELNET */
-#define CURL_DISABLE_TELNET 1
+/* #undef CURL_DISABLE_TELNET */
 
 /* to disable TFTP */
-/* #undef CURL_DISABLE_TFTP */
+#define CURL_DISABLE_TFTP 1
 
 /* to disable verbose strings */
 /* #undef CURL_DISABLE_VERBOSE_STRINGS */
@@ -125,13 +125,13 @@
 /* #undef CURL_WITH_MULTI_SSL */
 
 /* enable debug build options */
-#define DEBUGBUILD 1
+/* #undef DEBUGBUILD */
 
 /* your Entropy Gathering Daemon socket pathname */
 /* #undef EGD_SOCKET */
 
 /* Define if you want to enable IPv6 support */
-/* #undef ENABLE_IPV6 */
+#define ENABLE_IPV6 1
 
 /* Define to the type of arg 2 for gethostname. */
 #define GETHOSTNAME_TYPE_ARG2 size_t
@@ -370,7 +370,7 @@
 #define HAVE_LDAP_INIT_FD 1
 
 /* Use LDAPS implementation */
-/* #undef HAVE_LDAP_SSL */
+#define HAVE_LDAP_SSL 1
 
 /* Define to 1 if you have the ldap_ssl.h header file. */
 /* #undef HAVE_LDAP_SSL_H */
@@ -596,7 +596,7 @@
 /* #undef HAVE_SIG_ATOMIC_T_VOLATILE */
 
 /* Define to 1 if struct sockaddr_in6 has the sin6_scope_id member */
-/* #undef HAVE_SOCKADDR_IN6_SIN6_SCOPE_ID */
+#define HAVE_SOCKADDR_IN6_SIN6_SCOPE_ID 1
 
 /* Define to 1 if you have the socket function. */
 #define HAVE_SOCKET 1
@@ -821,10 +821,10 @@
 /* #undef NEED_THREAD_SAFE */
 
 /* Define to enable NTLM delegation to winbind's ntlm_auth helper. */
-/* #undef NTLM_WB_ENABLED */
+#define NTLM_WB_ENABLED 1
 
 /* Define absolute filename for winbind's ntlm_auth helper. */
-/* #undef NTLM_WB_FILE */
+#define NTLM_WB_FILE "/usr/bin/ntlm_auth"
 
 /* cpu-machine-OS */
 #define OS "x86_64-pc-linux-gnu"
@@ -935,7 +935,7 @@
 /* #undef USE_AMISSL */
 
 /* Define to enable c-ares support */
-/* #undef USE_ARES */
+#define USE_ARES 1
 
 /* if BearSSL is enabled */
 /* #undef USE_BEARSSL */
@@ -965,7 +965,7 @@
 /* #undef USE_LIBSSH2 */
 
 /* If you want to build curl with the built-in manual */
-#define USE_MANUAL 1
+/* #undef USE_MANUAL */
 
 /* if mbedTLS is enabled */
 /* #undef USE_MBEDTLS */
@@ -1019,7 +1019,7 @@
 #define USE_TLS_SRP 1
 
 /* Use Unix domain sockets */
-#define USE_UNIX_SOCKETS 1
+/* #undef USE_UNIX_SOCKETS */
 
 /* Define to 1 if you are building a Windows target with crypto API support.
    */
