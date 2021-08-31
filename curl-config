@@ -84,13 +84,13 @@ while test $# -gt 0; do
         ;;
 
     --feature|--features)
-        for feature in AsynchDNS HSTS IPv6 Largefile SSL TLS-SRP UnixSockets libz zstd ""; do
+        for feature in HTTPS-proxy IPv6 Largefile SSL TLS-SRP libz zstd ""; do
             test -n "$feature" && echo "$feature"
         done
         ;;
 
     --protocols)
-        for protocol in DICT HTTP HTTPS MQTT POP3 POP3S RTSP TELNET TFTP; do
+        for protocol in DICT FTP FTPS IMAP IMAPS LDAP SMTP SMTPS TELNET TFTP; do
             echo "$protocol"
         done
         ;;
@@ -161,7 +161,7 @@ while test $# -gt 0; do
            CURLLIBDIR=""
         fi
         if test "Xno" = "Xno"; then
-          echo ${CURLLIBDIR}-lcurl -lcares -lssl -lcrypto -lssl -lcrypto -lzstd -lz -lgcc
+          echo ${CURLLIBDIR}-lcurl -lssl -lcrypto -lssl -lcrypto -lldap -llber -lzstd -lz
         else
           echo ${CURLLIBDIR}-lcurl
         fi
@@ -172,7 +172,7 @@ while test $# -gt 0; do
 
     --static-libs)
         if test "Xyes" != "Xno" ; then
-          echo ${exec_prefix}/lib/libcurl.a -L/usr/usr/lib64 -lcares -lssl -lcrypto -lssl -lcrypto -lzstd -lz -lgcc
+          echo ${exec_prefix}/lib/libcurl.a  -lssl -lcrypto -lssl -lcrypto -lldap -llber -lzstd -lz
         else
           echo "curl was built with static libraries disabled" >&2
           exit 1
@@ -180,7 +180,7 @@ while test $# -gt 0; do
         ;;
 
     --configure)
-        echo " '--with-openssl' '--disable-shared' '--disable-libtool-lock' '--enable-silent-rules' '--enable-debug' '--disable-optimize' '--enable-warnings' '--disable-curldebug' '--enable-maintainer-mode' '--enable-ares' '--enable-http' '--disable-ftp' '--disable-file' '--disable-ldap' '--enable-rtsp' '--disable-proxy' '--enable-dict' '--enable-pop3' '--disable-imap' '--enable-smb' '--disable-smtp' '--disable-gopher' '--enable-manual' '--disable-libcurl-option' '--enable-ipv6' '--enable-openssl-auto-load-config' '--enable-versioned-symbols' '--disable-threaded-resolver' '--enable-pthreads' '--disable-verbose' '--disable-sspi' '--disable-crypto-auth' '--enable-ntlm-wb' '--enable-unix-sockets' '--enable-cookies' '--disable-socketpair' '--disable-http-auth' '--enable-doh' '--enable-mime' '--enable-netrc' '--enable-progress-meter' '--disable-get-easy-options' '--disable-alt-svc' '--enable-libgcc'"
+        echo " '--with-openssl' '--disable-shared' '--disable-largefile' '--disable-libtool-lock' '--disable-silent-rules' '--enable-debug' '--disable-warnings' '--disable-symbol-hiding' '--disable-hidden-symbols' '--disable-ares' '--enable-dependency-tracking' '--disable-http' '--disable-file' '--enable-ldap' '--disable-ldaps' '--enable-proxy' '--enable-telnet' '--disable-pop3' '--enable-imap' '--enable-smb' '--enable-smtp' '--disable-gopher' '--disable-mqtt' '--enable-manual' '--enable-libcurl-option' '--enable-ipv6' '--disable-versioned-symbols' '--disable-threaded-resolver' '--enable-pthreads' '--disable-verbose' '--enable-sspi' '--disable-crypto-auth' '--disable-unix-sockets' '--enable-cookies' '--disable-http-auth' '--enable-mime' '--disable-dateparse' '--disable-netrc' '--disable-progress-meter' '--enable-dnsshuffle' '--disable-get-easy-options' '--disable-hsts' '--enable-static' '--enable-fast-install'"
         ;;
 
     *)

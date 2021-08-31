@@ -58,19 +58,7 @@ libcurlu_la-rtsp.lo: rtsp.c /usr/include/stdc-predef.h curl_setup.h \
  /usr/include/unistd.h /usr/include/bits/posix_opt.h \
  /usr/include/bits/environments.h /usr/include/bits/confname.h \
  /usr/include/bits/getopt_posix.h /usr/include/bits/getopt_core.h \
- /usr/include/bits/unistd_ext.h curl_ctype.h urldata.h cookie.h psl.h \
- formdata.h /usr/include/netinet/in.h /usr/include/bits/stdint-uintn.h \
- /usr/include/bits/in.h timeval.h http_chunks.h hostip.h hash.h llist.h \
- curl_addrinfo.h /usr/include/netdb.h /usr/include/rpc/netdb.h \
- /usr/include/bits/netdb.h /usr/include/arpa/inet.h asyn.h \
- /usr/include/setjmp.h /usr/include/bits/setjmp.h splay.h dynbuf.h mime.h \
- imap.h pingpong.h curl_sasl.h pop3.h smtp.h ftp.h file.h vssh/ssh.h \
- ../lib/curl_setup.h http.h rtsp.h smb.h mqtt.h wildcard.h multihandle.h \
- conncache.h socketpair.h quic.h c-hyper.h transfer.h sendf.h multiif.h \
- url.h progress.h strcase.h select.h /usr/include/poll.h \
- /usr/include/sys/poll.h /usr/include/bits/poll.h connect.h nonblock.h \
- sockaddr.h strdup.h curl_printf.h ../include/curl/mprintf.h \
- curl_memory.h memdebug.h
+ /usr/include/bits/unistd_ext.h curl_ctype.h
 /usr/include/stdc-predef.h:
 curl_setup.h:
 curl_config.h:
@@ -186,63 +174,3 @@ curl_setup_once.h:
 /usr/include/bits/getopt_core.h:
 /usr/include/bits/unistd_ext.h:
 curl_ctype.h:
-urldata.h:
-cookie.h:
-psl.h:
-formdata.h:
-/usr/include/netinet/in.h:
-/usr/include/bits/stdint-uintn.h:
-/usr/include/bits/in.h:
-timeval.h:
-http_chunks.h:
-hostip.h:
-hash.h:
-llist.h:
-curl_addrinfo.h:
-/usr/include/netdb.h:
-/usr/include/rpc/netdb.h:
-/usr/include/bits/netdb.h:
-/usr/include/arpa/inet.h:
-asyn.h:
-/usr/include/setjmp.h:
-/usr/include/bits/setjmp.h:
-splay.h:
-dynbuf.h:
-mime.h:
-imap.h:
-pingpong.h:
-curl_sasl.h:
-pop3.h:
-smtp.h:
-ftp.h:
-file.h:
-vssh/ssh.h:
-../lib/curl_setup.h:
-http.h:
-rtsp.h:
-smb.h:
-mqtt.h:
-wildcard.h:
-multihandle.h:
-conncache.h:
-socketpair.h:
-quic.h:
-c-hyper.h:
-transfer.h:
-sendf.h:
-multiif.h:
-url.h:
-progress.h:
-strcase.h:
-select.h:
-/usr/include/poll.h:
-/usr/include/sys/poll.h:
-/usr/include/bits/poll.h:
-connect.h:
-nonblock.h:
-sockaddr.h:
-strdup.h:
-curl_printf.h:
-../include/curl/mprintf.h:
-curl_memory.h:
-memdebug.h:
